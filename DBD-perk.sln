@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBD-perk", "DBD-perk.csproj", "{72B6F866-34CE-42F4-BB7B-CD9BF211767E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72B6F866-34CE-42F4-BB7B-CD9BF211767E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72B6F866-34CE-42F4-BB7B-CD9BF211767E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72B6F866-34CE-42F4-BB7B-CD9BF211767E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72B6F866-34CE-42F4-BB7B-CD9BF211767E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F54F2071-9694-49BD-9279-7B31F3236899}
+	EndGlobalSection
+EndGlobal
