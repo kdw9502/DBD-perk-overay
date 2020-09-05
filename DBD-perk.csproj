@@ -9,326 +9,664 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Perks\bg.png" />
-    <None Remove="Perks\iconPerks_aceInTheHole.png" />
-    <None Remove="Perks\iconPerks_adrenaline.png" />
-    <None Remove="Perks\iconPerks_aftercare.png" />
-    <None Remove="Perks\iconPerks_agitation.png" />
-    <None Remove="Perks\iconPerks_alert.png" />
-    <None Remove="Perks\iconPerks_aNursesCalling.png" />
-    <None Remove="Perks\iconPerks_anyMeansNecessary.png" />
-    <None Remove="Perks\iconPerks_artefactHunter.png" />
-    <None Remove="Perks\iconPerks_autodidact.png" />
-    <None Remove="Perks\iconPerks_babySitter.png" />
-    <None Remove="Perks\iconPerks_balancedLanding.png" />
-    <None Remove="Perks\iconPerks_bamboozle.png" />
-    <None Remove="Perks\iconPerks_BBQAndChili.png" />
-    <None Remove="Perks\iconPerks_BeastOfPrey.png" />
-    <None Remove="Perks\iconPerks_betterTogether.png" />
-    <None Remove="Perks\iconPerks_bitterMurmur.png" />
-    <None Remove="Perks\iconPerks_bloodEcho.png" />
-    <None Remove="Perks\iconPerks_bloodhound.png" />
-    <None Remove="Perks\iconPerks_bloodPact.png" />
-    <None Remove="Perks\iconPerks_bloodWarden.png" />
-    <None Remove="Perks\iconPerks_boilOver.png" />
-    <None Remove="Perks\iconPerks_bond.png" />
-    <None Remove="Perks\iconPerks_borrowedTime.png" />
-    <None Remove="Perks\iconPerks_botanyKnowledge.png" />
-    <None Remove="Perks\iconPerks_breakdown.png" />
-    <None Remove="Perks\iconPerks_breakout.png" />
-    <None Remove="Perks\iconPerks_brutalStrength.png" />
-    <None Remove="Perks\iconPerks_buckleUp.png" />
-    <None Remove="Perks\iconPerks_calmSpirit.png" />
-    <None Remove="Perks\iconPerks_camaraderie.png" />
-    <None Remove="Perks\iconPerks_corruptIntervention.png" />
-    <None Remove="Perks\iconPerks_coulrophobia.png" />
-    <None Remove="Perks\iconPerks_cruelConfinement.png" />
-    <None Remove="Perks\iconPerks_danceWithMe.png" />
-    <None Remove="Perks\iconPerks_darkDevotion.png" />
-    <None Remove="Perks\iconPerks_darkSense.png" />
-    <None Remove="Perks\iconPerks_DeadHard.png" />
-    <None Remove="Perks\iconPerks_deadManSwitch.png" />
-    <None Remove="Perks\iconPerks_deathbound.png" />
-    <None Remove="Perks\iconPerks_decisiveStrike.png" />
-    <None Remove="Perks\iconPerks_deerstalker.png" />
-    <None Remove="Perks\iconPerks_dejaVu.png" />
-    <None Remove="Perks\iconPerks_deliverance.png" />
-    <None Remove="Perks\iconPerks_detectivesHunch.png" />
-    <None Remove="Perks\iconPerks_devourHope.png" />
-    <None Remove="Perks\iconPerks_discordance.png" />
-    <None Remove="Perks\iconPerks_distortion.png" />
-    <None Remove="Perks\iconPerks_distressing.png" />
-    <None Remove="Perks\iconPerks_diversion.png" />
-    <None Remove="Perks\iconPerks_dyingLight.png" />
-    <None Remove="Perks\iconPerks_empathy.png" />
-    <None Remove="Perks\iconPerks_enduring.png" />
-    <None Remove="Perks\iconPerks_fireUp.png" />
-    <None Remove="Perks\iconPerks_fixated.png" />
-    <None Remove="Perks\iconPerks_flipFlop.png" />
-    <None Remove="Perks\iconPerks_forcedPenance.png" />
-    <None Remove="Perks\iconPerks_forThePeople.png" />
-    <None Remove="Perks\iconPerks_franklinsLoss.png" />
-    <None Remove="Perks\iconPerks_furtiveChase.png" />
-    <None Remove="Perks\iconPerks_gearHead.png" />
-    <None Remove="Perks\iconPerks_generatorOvercharge.png" />
-    <None Remove="Perks\iconPerks_hangmansTrick.png" />
-    <None Remove="Perks\iconPerks_hatred.png" />
-    <None Remove="Perks\iconPerks_hauntedGround.png" />
-    <None Remove="Perks\iconPerks_headOn.png" />
-    <None Remove="Perks\iconPerks_hexRetribution.png" />
-    <None Remove="Perks\iconPerks_hope.png" />
-    <None Remove="Perks\iconPerks_HuntressLullaby.png" />
-    <None Remove="Perks\iconPerks_imAllEars.png" />
-    <None Remove="Perks\iconPerks_infectiousFright.png" />
-    <None Remove="Perks\iconPerks_innerStrength.png" />
-    <None Remove="Perks\iconPerks_insidious.png" />
-    <None Remove="Perks\iconPerks_ironGrasp.png" />
-    <None Remove="Perks\iconPerks_ironMaiden.png" />
-    <None Remove="Perks\iconPerks_ironWill.png" />
-    <None Remove="Perks\iconPerks_kindred.png" />
-    <None Remove="Perks\iconPerks_knockOut.png" />
-    <None Remove="Perks\iconPerks_lastStanding.png" />
-    <None Remove="Perks\iconPerks_leader.png" />
-    <None Remove="Perks\iconPerks_leftBehind.png" />
-    <None Remove="Perks\iconPerks_lightborn.png" />
-    <None Remove="Perks\iconPerks_lightweight.png" />
-    <None Remove="Perks\iconPerks_lithe.png" />
-    <None Remove="Perks\iconPerks_luckyBreak.png" />
-    <None Remove="Perks\iconPerks_madGrit.png" />
-    <None Remove="Perks\iconPerks_makeYourChoice.png" />
-    <None Remove="Perks\iconPerks_mettleOfMan.png" />
-    <None Remove="Perks\iconPerks_mindBreaker.png" />
-    <None Remove="Perks\iconPerks_monitorAndAbuse.png" />
-    <None Remove="Perks\iconPerks_monstrousShrine.png" />
-    <None Remove="Perks\iconPerks_nemesis.png" />
-    <None Remove="Perks\iconPerks_NoMither.png" />
-    <None Remove="Perks\iconPerks_noOneEscapesDeath.png" />
-    <None Remove="Perks\iconPerks_noOneLeftBehind.png" />
-    <None Remove="Perks\iconPerks_objectOfObsession.png" />
-    <None Remove="Perks\iconPerks_offTheRecord.png" />
-    <None Remove="Perks\iconPerks_openHanded.png" />
-    <None Remove="Perks\iconPerks_overwhelmingPresence.png" />
-    <None Remove="Perks\iconPerks_pharmacy.png" />
-    <None Remove="Perks\iconPerks_playWithYourFood.png" />
-    <None Remove="Perks\iconPerks_plunderersInstinct.png" />
-    <None Remove="Perks\iconPerks_poised.png" />
-    <None Remove="Perks\iconPerks_popGoesTheWeasel.png" />
-    <None Remove="Perks\iconPerks_predator.png" />
-    <None Remove="Perks\iconPerks_premonition.png" />
-    <None Remove="Perks\iconPerks_proveThyself.png" />
-    <None Remove="Perks\iconPerks_quickAndQuiet.png" />
-    <None Remove="Perks\iconPerks_redHerring.png" />
-    <None Remove="Perks\iconPerks_rememberMe.png" />
-    <None Remove="Perks\iconPerks_repressedAlliance.png" />
-    <None Remove="Perks\iconPerks_resilience.png" />
-    <None Remove="Perks\iconPerks_ruin.png" />
-    <None Remove="Perks\iconPerks_saboteur.png" />
-    <None Remove="Perks\iconPerks_saveTheBestForLast.png" />
-    <None Remove="Perks\iconPerks_secondWind.png" />
-    <None Remove="Perks\iconPerks_selfCare.png" />
-    <None Remove="Perks\iconPerks_shadowborn.png" />
-    <None Remove="Perks\iconPerks_slipperyMeat.png" />
-    <None Remove="Perks\iconPerks_sloppyButcher.png" />
-    <None Remove="Perks\iconPerks_smallGame.png" />
-    <None Remove="Perks\iconPerks_soleSurvivor.png" />
-    <None Remove="Perks\iconPerks_solidarity.png" />
-    <None Remove="Perks\iconPerks_soulGuard.png" />
-    <None Remove="Perks\iconPerks_spiesFromTheShadows.png" />
-    <None Remove="Perks\iconPerks_spineChill.png" />
-    <None Remove="Perks\iconPerks_spiritFury.png" />
-    <None Remove="Perks\iconPerks_sprintBurst.png" />
-    <None Remove="Perks\iconPerks_stakeOut.png" />
-    <None Remove="Perks\iconPerks_streetwise.png" />
-    <None Remove="Perks\iconPerks_stridor.png" />
-    <None Remove="Perks\iconPerks_surge.png" />
-    <None Remove="Perks\iconPerks_surveillance.png" />
-    <None Remove="Perks\iconPerks_technician.png" />
-    <None Remove="Perks\iconPerks_temp1.png" />
-    <None Remove="Perks\iconPerks_temp2.png" />
-    <None Remove="Perks\iconPerks_tenacity.png" />
-    <None Remove="Perks\iconPerks_TerritorialImperative.png" />
-    <None Remove="Perks\iconPerks_thatanophobia.png" />
-    <None Remove="Perks\iconPerks_theThirdSeal.png" />
-    <None Remove="Perks\iconPerks_thisIsNotHappening.png" />
-    <None Remove="Perks\iconPerks_thrillingTremors.png" />
-    <None Remove="Perks\iconPerks_thrillOfTheHunt.png" />
-    <None Remove="Perks\iconPerks_tinkerer.png" />
-    <None Remove="Perks\iconPerks_toughRunner.png" />
-    <None Remove="Perks\iconPerks_trailOfTorment.png" />
-    <None Remove="Perks\iconPerks_unbreakable.png" />
-    <None Remove="Perks\iconPerks_underperform.png" />
-    <None Remove="Perks\iconPerks_unnervingPresence.png" />
-    <None Remove="Perks\iconPerks_unrelenting.png" />
-    <None Remove="Perks\iconPerks_upTheAnte.png" />
-    <None Remove="Perks\iconPerks_urbanEvasion.png" />
-    <None Remove="Perks\iconPerks_vigil.png" />
-    <None Remove="Perks\iconPerks_wakeUp.png" />
-    <None Remove="Perks\iconPerks_wellMakeIt.png" />
-    <None Remove="Perks\iconPerks_WereGonnaLiveForever.png" />
-    <None Remove="Perks\iconPerks_whispers.png" />
-    <None Remove="Perks\iconPerks_windowsOfOpportunity.png" />
-    <None Remove="Perks\iconPerks_zanshinTactics.png" />
-    <None Remove="Perks\Missing.png" />
-    <None Remove="Perks\toth_temp.png" />
+    <Compile Remove="Perks\**" />
+    <EmbeddedResource Remove="Perks\**" />
+    <None Remove="Perks\**" />
+    <Page Remove="Perks\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Perks\bg.png" />
-    <Resource Include="Perks\iconPerks_aceInTheHole.png" />
-    <Resource Include="Perks\iconPerks_adrenaline.png" />
-    <Resource Include="Perks\iconPerks_aftercare.png" />
-    <Resource Include="Perks\iconPerks_agitation.png" />
-    <Resource Include="Perks\iconPerks_alert.png" />
-    <Resource Include="Perks\iconPerks_aNursesCalling.png" />
-    <Resource Include="Perks\iconPerks_anyMeansNecessary.png" />
-    <Resource Include="Perks\iconPerks_artefactHunter.png" />
-    <Resource Include="Perks\iconPerks_autodidact.png" />
-    <Resource Include="Perks\iconPerks_babySitter.png" />
-    <Resource Include="Perks\iconPerks_balancedLanding.png" />
-    <Resource Include="Perks\iconPerks_bamboozle.png" />
-    <Resource Include="Perks\iconPerks_BBQAndChili.png" />
-    <Resource Include="Perks\iconPerks_BeastOfPrey.png" />
-    <Resource Include="Perks\iconPerks_betterTogether.png" />
-    <Resource Include="Perks\iconPerks_bitterMurmur.png" />
-    <Resource Include="Perks\iconPerks_bloodEcho.png" />
-    <Resource Include="Perks\iconPerks_bloodhound.png" />
-    <Resource Include="Perks\iconPerks_bloodPact.png" />
-    <Resource Include="Perks\iconPerks_bloodWarden.png" />
-    <Resource Include="Perks\iconPerks_boilOver.png" />
-    <Resource Include="Perks\iconPerks_bond.png" />
-    <Resource Include="Perks\iconPerks_borrowedTime.png" />
-    <Resource Include="Perks\iconPerks_botanyKnowledge.png" />
-    <Resource Include="Perks\iconPerks_breakdown.png" />
-    <Resource Include="Perks\iconPerks_breakout.png" />
-    <Resource Include="Perks\iconPerks_brutalStrength.png" />
-    <Resource Include="Perks\iconPerks_buckleUp.png" />
-    <Resource Include="Perks\iconPerks_calmSpirit.png" />
-    <Resource Include="Perks\iconPerks_camaraderie.png" />
-    <Resource Include="Perks\iconPerks_corruptIntervention.png" />
-    <Resource Include="Perks\iconPerks_coulrophobia.png" />
-    <Resource Include="Perks\iconPerks_cruelConfinement.png" />
-    <Resource Include="Perks\iconPerks_danceWithMe.png" />
-    <Resource Include="Perks\iconPerks_darkDevotion.png" />
-    <Resource Include="Perks\iconPerks_darkSense.png" />
-    <Resource Include="Perks\iconPerks_DeadHard.png" />
-    <Resource Include="Perks\iconPerks_deadManSwitch.png" />
-    <Resource Include="Perks\iconPerks_deathbound.png" />
-    <Resource Include="Perks\iconPerks_decisiveStrike.png" />
-    <Resource Include="Perks\iconPerks_deerstalker.png" />
-    <Resource Include="Perks\iconPerks_dejaVu.png" />
-    <Resource Include="Perks\iconPerks_deliverance.png" />
-    <Resource Include="Perks\iconPerks_detectivesHunch.png" />
-    <Resource Include="Perks\iconPerks_devourHope.png" />
-    <Resource Include="Perks\iconPerks_discordance.png" />
-    <Resource Include="Perks\iconPerks_distortion.png" />
-    <Resource Include="Perks\iconPerks_distressing.png" />
-    <Resource Include="Perks\iconPerks_diversion.png" />
-    <Resource Include="Perks\iconPerks_dyingLight.png" />
-    <Resource Include="Perks\iconPerks_empathy.png" />
-    <Resource Include="Perks\iconPerks_enduring.png" />
-    <Resource Include="Perks\iconPerks_fireUp.png" />
-    <Resource Include="Perks\iconPerks_fixated.png" />
-    <Resource Include="Perks\iconPerks_flipFlop.png" />
-    <Resource Include="Perks\iconPerks_forcedPenance.png" />
-    <Resource Include="Perks\iconPerks_forThePeople.png" />
-    <Resource Include="Perks\iconPerks_franklinsLoss.png" />
-    <Resource Include="Perks\iconPerks_furtiveChase.png" />
-    <Resource Include="Perks\iconPerks_gearHead.png" />
-    <Resource Include="Perks\iconPerks_generatorOvercharge.png" />
-    <Resource Include="Perks\iconPerks_hangmansTrick.png" />
-    <Resource Include="Perks\iconPerks_hatred.png" />
-    <Resource Include="Perks\iconPerks_hauntedGround.png" />
-    <Resource Include="Perks\iconPerks_headOn.png" />
-    <Resource Include="Perks\iconPerks_hexRetribution.png" />
-    <Resource Include="Perks\iconPerks_hope.png" />
-    <Resource Include="Perks\iconPerks_HuntressLullaby.png" />
-    <Resource Include="Perks\iconPerks_imAllEars.png" />
-    <Resource Include="Perks\iconPerks_infectiousFright.png" />
-    <Resource Include="Perks\iconPerks_innerStrength.png" />
-    <Resource Include="Perks\iconPerks_insidious.png" />
-    <Resource Include="Perks\iconPerks_ironGrasp.png" />
-    <Resource Include="Perks\iconPerks_ironMaiden.png" />
-    <Resource Include="Perks\iconPerks_ironWill.png" />
-    <Resource Include="Perks\iconPerks_kindred.png" />
-    <Resource Include="Perks\iconPerks_knockOut.png" />
-    <Resource Include="Perks\iconPerks_lastStanding.png" />
-    <Resource Include="Perks\iconPerks_leader.png" />
-    <Resource Include="Perks\iconPerks_leftBehind.png" />
-    <Resource Include="Perks\iconPerks_lightborn.png" />
-    <Resource Include="Perks\iconPerks_lightweight.png" />
-    <Resource Include="Perks\iconPerks_lithe.png" />
-    <Resource Include="Perks\iconPerks_luckyBreak.png" />
-    <Resource Include="Perks\iconPerks_madGrit.png" />
-    <Resource Include="Perks\iconPerks_makeYourChoice.png" />
-    <Resource Include="Perks\iconPerks_mettleOfMan.png" />
-    <Resource Include="Perks\iconPerks_mindBreaker.png" />
-    <Resource Include="Perks\iconPerks_monitorAndAbuse.png" />
-    <Resource Include="Perks\iconPerks_monstrousShrine.png" />
-    <Resource Include="Perks\iconPerks_nemesis.png" />
-    <Resource Include="Perks\iconPerks_NoMither.png" />
-    <Resource Include="Perks\iconPerks_noOneEscapesDeath.png" />
-    <Resource Include="Perks\iconPerks_noOneLeftBehind.png" />
-    <Resource Include="Perks\iconPerks_objectOfObsession.png" />
-    <Resource Include="Perks\iconPerks_offTheRecord.png" />
-    <Resource Include="Perks\iconPerks_openHanded.png" />
-    <Resource Include="Perks\iconPerks_overwhelmingPresence.png" />
-    <Resource Include="Perks\iconPerks_pharmacy.png" />
-    <Resource Include="Perks\iconPerks_playWithYourFood.png" />
-    <Resource Include="Perks\iconPerks_plunderersInstinct.png" />
-    <Resource Include="Perks\iconPerks_poised.png" />
-    <Resource Include="Perks\iconPerks_popGoesTheWeasel.png" />
-    <Resource Include="Perks\iconPerks_predator.png" />
-    <Resource Include="Perks\iconPerks_premonition.png" />
-    <Resource Include="Perks\iconPerks_proveThyself.png" />
-    <Resource Include="Perks\iconPerks_quickAndQuiet.png" />
-    <Resource Include="Perks\iconPerks_redHerring.png" />
-    <Resource Include="Perks\iconPerks_rememberMe.png" />
-    <Resource Include="Perks\iconPerks_repressedAlliance.png" />
-    <Resource Include="Perks\iconPerks_resilience.png" />
-    <Resource Include="Perks\iconPerks_ruin.png" />
-    <Resource Include="Perks\iconPerks_saboteur.png" />
-    <Resource Include="Perks\iconPerks_saveTheBestForLast.png" />
-    <Resource Include="Perks\iconPerks_secondWind.png" />
-    <Resource Include="Perks\iconPerks_selfCare.png" />
-    <Resource Include="Perks\iconPerks_shadowborn.png" />
-    <Resource Include="Perks\iconPerks_slipperyMeat.png" />
-    <Resource Include="Perks\iconPerks_sloppyButcher.png" />
-    <Resource Include="Perks\iconPerks_smallGame.png" />
-    <Resource Include="Perks\iconPerks_soleSurvivor.png" />
-    <Resource Include="Perks\iconPerks_solidarity.png" />
-    <Resource Include="Perks\iconPerks_soulGuard.png" />
-    <Resource Include="Perks\iconPerks_spiesFromTheShadows.png" />
-    <Resource Include="Perks\iconPerks_spineChill.png" />
-    <Resource Include="Perks\iconPerks_spiritFury.png" />
-    <Resource Include="Perks\iconPerks_sprintBurst.png" />
-    <Resource Include="Perks\iconPerks_stakeOut.png" />
-    <Resource Include="Perks\iconPerks_streetwise.png" />
-    <Resource Include="Perks\iconPerks_stridor.png" />
-    <Resource Include="Perks\iconPerks_surge.png" />
-    <Resource Include="Perks\iconPerks_surveillance.png" />
-    <Resource Include="Perks\iconPerks_technician.png" />
-    <Resource Include="Perks\iconPerks_tenacity.png" />
-    <Resource Include="Perks\iconPerks_TerritorialImperative.png" />
-    <Resource Include="Perks\iconPerks_thatanophobia.png" />
-    <Resource Include="Perks\iconPerks_theThirdSeal.png" />
-    <Resource Include="Perks\iconPerks_thisIsNotHappening.png" />
-    <Resource Include="Perks\iconPerks_thrillingTremors.png" />
-    <Resource Include="Perks\iconPerks_thrillOfTheHunt.png" />
-    <Resource Include="Perks\iconPerks_tinkerer.png" />
-    <Resource Include="Perks\iconPerks_trailOfTorment.png" />
-    <Resource Include="Perks\iconPerks_unbreakable.png" />
-    <Resource Include="Perks\iconPerks_underperform.png" />
-    <Resource Include="Perks\iconPerks_unnervingPresence.png" />
-    <Resource Include="Perks\iconPerks_unrelenting.png" />
-    <Resource Include="Perks\iconPerks_upTheAnte.png" />
-    <Resource Include="Perks\iconPerks_urbanEvasion.png" />
-    <Resource Include="Perks\iconPerks_vigil.png" />
-    <Resource Include="Perks\iconPerks_wakeUp.png" />
-    <Resource Include="Perks\iconPerks_wellMakeIt.png" />
-    <Resource Include="Perks\iconPerks_WereGonnaLiveForever.png" />
-    <Resource Include="Perks\iconPerks_whispers.png" />
-    <Resource Include="Perks\iconPerks_windowsOfOpportunity.png" />
-    <Resource Include="Perks\iconPerks_zanshinTactics.png" />
+    <None Remove="resources\bg.png" />
+    <None Remove="resources\Perks\aceInTheHole.png" />
+    <None Remove="resources\Perks\adrenaline.png" />
+    <None Remove="resources\Perks\aftercare.png" />
+    <None Remove="resources\Perks\agitation.png" />
+    <None Remove="resources\Perks\alert.png" />
+    <None Remove="resources\Perks\aNursesCalling.png" />
+    <None Remove="resources\Perks\anyMeansNecessary.png" />
+    <None Remove="resources\Perks\autodidact.png" />
+    <None Remove="resources\Perks\babySitter.png" />
+    <None Remove="resources\Perks\balancedLanding.png" />
+    <None Remove="resources\Perks\bamboozle.png" />
+    <None Remove="resources\Perks\BBQAndChili.png" />
+    <None Remove="resources\Perks\beastOfPrey.png" />
+    <None Remove="resources\Perks\betterTogether.png" />
+    <None Remove="resources\Perks\bitterMurmur.png" />
+    <None Remove="resources\Perks\bloodEcho.png" />
+    <None Remove="resources\Perks\bloodhound.png" />
+    <None Remove="resources\Perks\bloodPact.png" />
+    <None Remove="resources\Perks\bloodWarden.png" />
+    <None Remove="resources\Perks\boilOver.png" />
+    <None Remove="resources\Perks\bond.png" />
+    <None Remove="resources\Perks\borrowedTime.png" />
+    <None Remove="resources\Perks\botanyKnowledge.png" />
+    <None Remove="resources\Perks\breakdown.png" />
+    <None Remove="resources\Perks\breakout.png" />
+    <None Remove="resources\Perks\brutalStrength.png" />
+    <None Remove="resources\Perks\buckleUp.png" />
+    <None Remove="resources\Perks\calmSpirit.png" />
+    <None Remove="resources\Perks\camaraderie.png" />
+    <None Remove="resources\Perks\corruptIntervention.png" />
+    <None Remove="resources\Perks\coulrophobia.png" />
+    <None Remove="resources\Perks\cruelConfinement.png" />
+    <None Remove="resources\Perks\danceWithMe.png" />
+    <None Remove="resources\Perks\darkDevotion.png" />
+    <None Remove="resources\Perks\darkSense.png" />
+    <None Remove="resources\Perks\deadHard.png" />
+    <None Remove="resources\Perks\deadManSwitch.png" />
+    <None Remove="resources\Perks\deathbound.png" />
+    <None Remove="resources\Perks\decisiveStrike.png" />
+    <None Remove="resources\Perks\deerstalker.png" />
+    <None Remove="resources\Perks\dejaVu.png" />
+    <None Remove="resources\Perks\deliverance.png" />
+    <None Remove="resources\Perks\detectivesHunch.png" />
+    <None Remove="resources\Perks\devourHope.png" />
+    <None Remove="resources\Perks\discordance.png" />
+    <None Remove="resources\Perks\distortion.png" />
+    <None Remove="resources\Perks\distressing.png" />
+    <None Remove="resources\Perks\diversion.png" />
+    <None Remove="resources\Perks\dyingLight.png" />
+    <None Remove="resources\Perks\empathy.png" />
+    <None Remove="resources\Perks\enduring.png" />
+    <None Remove="resources\Perks\fireUp.png" />
+    <None Remove="resources\Perks\fixated.png" />
+    <None Remove="resources\Perks\flipFlop.png" />
+    <None Remove="resources\Perks\forcedPenance.png" />
+    <None Remove="resources\Perks\forThePeople.png" />
+    <None Remove="resources\Perks\franklinsLoss.png" />
+    <None Remove="resources\Perks\furtiveChase.png" />
+    <None Remove="resources\Perks\gearHead.png" />
+    <None Remove="resources\Perks\generatorOvercharge.png" />
+    <None Remove="resources\Perks\hangmansTrick.png" />
+    <None Remove="resources\Perks\hatred.png" />
+    <None Remove="resources\Perks\hauntedGround.png" />
+    <None Remove="resources\Perks\headOn.png" />
+    <None Remove="resources\Perks\hexRetribution.png" />
+    <None Remove="resources\Perks\hope.png" />
+    <None Remove="resources\Perks\huntressLullaby.png" />
+    <None Remove="resources\Perks\imAllEars.png" />
+    <None Remove="resources\Perks\infectiousFright.png" />
+    <None Remove="resources\Perks\innerStrength.png" />
+    <None Remove="resources\Perks\insidious.png" />
+    <None Remove="resources\Perks\ironGrasp.png" />
+    <None Remove="resources\Perks\ironMaiden.png" />
+    <None Remove="resources\Perks\ironWill.png" />
+    <None Remove="resources\Perks\kindred.png" />
+    <None Remove="resources\Perks\knockOut.png" />
+    <None Remove="resources\Perks\leader.png" />
+    <None Remove="resources\Perks\leftBehind.png" />
+    <None Remove="resources\Perks\lightborn.png" />
+    <None Remove="resources\Perks\lightweight.png" />
+    <None Remove="resources\Perks\lithe.png" />
+    <None Remove="resources\Perks\luckyBreak.png" />
+    <None Remove="resources\Perks\madGrit.png" />
+    <None Remove="resources\Perks\makeYourChoice.png" />
+    <None Remove="resources\Perks\mettleOfMan.png" />
+    <None Remove="resources\Perks\mindBreaker.png" />
+    <None Remove="resources\Perks\monitorAndAbuse.png" />
+    <None Remove="resources\Perks\monstrousShrine.png" />
+    <None Remove="resources\Perks\nemesis.png" />
+    <None Remove="resources\Perks\noMither.png" />
+    <None Remove="resources\Perks\noOneEscapesDeath.png" />
+    <None Remove="resources\Perks\noOneLeftBehind.png" />
+    <None Remove="resources\Perks\objectOfObsession.png" />
+    <None Remove="resources\Perks\offTheRecord.png" />
+    <None Remove="resources\Perks\openHanded.png" />
+    <None Remove="resources\Perks\overwhelmingPresence.png" />
+    <None Remove="resources\Perks\pharmacy.png" />
+    <None Remove="resources\Perks\playWithYourFood.png" />
+    <None Remove="resources\Perks\plunderersInstinct.png" />
+    <None Remove="resources\Perks\poised.png" />
+    <None Remove="resources\Perks\popGoesTheWeasel.png" />
+    <None Remove="resources\Perks\predator.png" />
+    <None Remove="resources\Perks\premonition.png" />
+    <None Remove="resources\Perks\proveThyself.png" />
+    <None Remove="resources\Perks\quickAndQuiet.png" />
+    <None Remove="resources\Perks\redHerring.png" />
+    <None Remove="resources\Perks\rememberMe.png" />
+    <None Remove="resources\Perks\repressedAlliance.png" />
+    <None Remove="resources\Perks\resilience.png" />
+    <None Remove="resources\Perks\ruin.png" />
+    <None Remove="resources\Perks\saboteur.png" />
+    <None Remove="resources\Perks\saveTheBestForLast.png" />
+    <None Remove="resources\Perks\secondWind.png" />
+    <None Remove="resources\Perks\selfCare.png" />
+    <None Remove="resources\Perks\shadowborn.png" />
+    <None Remove="resources\Perks\slipperyMeat.png" />
+    <None Remove="resources\Perks\sloppyButcher.png" />
+    <None Remove="resources\Perks\smallGame.png" />
+    <None Remove="resources\Perks\soleSurvivor.png" />
+    <None Remove="resources\Perks\solidarity.png" />
+    <None Remove="resources\Perks\soulGuard.png" />
+    <None Remove="resources\Perks\spiesFromTheShadows.png" />
+    <None Remove="resources\Perks\spineChill.png" />
+    <None Remove="resources\Perks\spiritFury.png" />
+    <None Remove="resources\Perks\sprintBurst.png" />
+    <None Remove="resources\Perks\stakeOut.png" />
+    <None Remove="resources\Perks\streetwise.png" />
+    <None Remove="resources\Perks\stridor.png" />
+    <None Remove="resources\Perks\surge.png" />
+    <None Remove="resources\Perks\surveillance.png" />
+    <None Remove="resources\Perks\technician.png" />
+    <None Remove="resources\Perks\tenacity.png" />
+    <None Remove="resources\Perks\territorialImperative.png" />
+    <None Remove="resources\Perks\thatanophobia.png" />
+    <None Remove="resources\Perks\theThirdSeal.png" />
+    <None Remove="resources\Perks\thisIsNotHappening.png" />
+    <None Remove="resources\Perks\thrillingTremors.png" />
+    <None Remove="resources\Perks\thrillOfTheHunt.png" />
+    <None Remove="resources\Perks\tinkerer.png" />
+    <None Remove="resources\Perks\trailOfTorment.png" />
+    <None Remove="resources\Perks\unbreakable.png" />
+    <None Remove="resources\Perks\unnervingPresence.png" />
+    <None Remove="resources\Perks\unrelenting.png" />
+    <None Remove="resources\Perks\upTheAnte.png" />
+    <None Remove="resources\Perks\urbanEvasion.png" />
+    <None Remove="resources\Perks\vigil.png" />
+    <None Remove="resources\Perks\wakeUp.png" />
+    <None Remove="resources\Perks\wellMakeIt.png" />
+    <None Remove="resources\Perks\wereGonnaLiveForever.png" />
+    <None Remove="resources\Perks\whispers.png" />
+    <None Remove="resources\Perks\windowsOfOpportunity.png" />
+    <None Remove="resources\Perks\zanshinTactics.png" />
+    <None Remove="resources\perk_info.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenCvSharp4" Version="4.4.0.20200725" />
+    <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.4.0.20200725" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\aceInTheHole.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\adrenaline.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\aftercare.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\agitation.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\alert.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\aNursesCalling.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\anyMeansNecessary.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\autodidact.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\babySitter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\balancedLanding.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\bamboozle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\BBQAndChili.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\beastOfPrey.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\betterTogether.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\bitterMurmur.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\bloodEcho.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\bloodhound.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\bloodPact.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\bloodWarden.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\boilOver.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\bond.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\borrowedTime.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\botanyKnowledge.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\breakdown.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\breakout.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\brutalStrength.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\buckleUp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\calmSpirit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\camaraderie.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\corruptIntervention.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\coulrophobia.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\cruelConfinement.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\danceWithMe.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\darkDevotion.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\darkSense.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\deadHard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\deadManSwitch.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\deathbound.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\decisiveStrike.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\deerstalker.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\dejaVu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\deliverance.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\detectivesHunch.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\devourHope.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\discordance.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\distortion.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\distressing.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\diversion.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\dyingLight.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\empathy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\enduring.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\fireUp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\fixated.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\flipFlop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\forcedPenance.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\forThePeople.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\franklinsLoss.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\furtiveChase.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\gearHead.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\generatorOvercharge.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\hangmansTrick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\hatred.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\hauntedGround.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\headOn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\hexRetribution.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\hope.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\huntressLullaby.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\imAllEars.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\infectiousFright.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\innerStrength.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\insidious.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\ironGrasp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\ironMaiden.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\ironWill.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\kindred.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\knockOut.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\leader.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\leftBehind.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\lightborn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\lightweight.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\lithe.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\luckyBreak.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\madGrit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\makeYourChoice.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\mettleOfMan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\mindBreaker.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\monitorAndAbuse.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\monstrousShrine.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\nemesis.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\noMither.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\noOneEscapesDeath.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\noOneLeftBehind.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\objectOfObsession.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\offTheRecord.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\openHanded.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\overwhelmingPresence.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\pharmacy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\playWithYourFood.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\plunderersInstinct.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\poised.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\popGoesTheWeasel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\predator.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\premonition.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\proveThyself.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\quickAndQuiet.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\redHerring.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\rememberMe.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\repressedAlliance.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\resilience.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\ruin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\saboteur.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\saveTheBestForLast.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\secondWind.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\selfCare.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\shadowborn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\slipperyMeat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\sloppyButcher.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\smallGame.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\soleSurvivor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\solidarity.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\soulGuard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\spiesFromTheShadows.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\spineChill.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\spiritFury.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\sprintBurst.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\stakeOut.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\streetwise.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\stridor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\surge.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\surveillance.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\technician.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\tenacity.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\territorialImperative.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\thatanophobia.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\theThirdSeal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\thisIsNotHappening.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\thrillingTremors.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\thrillOfTheHunt.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\tinkerer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\trailOfTorment.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\unbreakable.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\unnervingPresence.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\unrelenting.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\upTheAnte.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\urbanEvasion.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\vigil.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\wakeUp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\wellMakeIt.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\wereGonnaLiveForever.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\whispers.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\windowsOfOpportunity.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Perks\zanshinTactics.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\perk_info.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>

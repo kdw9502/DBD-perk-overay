@@ -17,8 +17,8 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image x:Name="PerkBG" Height="128" Width="128" Stretch="Fill" Source="Perks/bg.png" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Image x:Name="PerkImgae" Height="128" Width="128" Stretch="Fill" Source="Perks/iconPerks_aceInTheHole.png" Canvas.Left="0
+        <Image x:Name="PerkBG" Height="128" Width="128" Stretch="Fill" Source="resources/bg.png" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="PerkImgae" Height="128" Width="128" Stretch="Fill" Source="resources/Perks/aceInTheHole.png" Canvas.Left="0
                " HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="0"/>
         <TextBlock TextWrapping="Wrap" Canvas.Left="133" Height="128" Width="567" Foreground="White" Text="Default Text For Perk" FontSize="16"/>
 
