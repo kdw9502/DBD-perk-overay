@@ -1,14 +1,17 @@
-﻿using System;
+﻿using OpenCvSharp;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Windows;
+using System.Windows.Documents;
 using System.Windows.Threading;
 
 namespace DBD_perk
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow : System.Windows.Window
     {
         public struct Rect
         {
@@ -35,12 +38,14 @@ namespace DBD_perk
         {
             InitializeComponent();
             PerkInfoLoader.load();
-            StartTimer();
-            
+            CompareImage();
+            StartRepositionTimer();
+            //GetPerkImage();
+
             Topmost = true;
         }
 
-        private void StartTimer()
+        private void StartRepositionTimer()
         {
             UpdateDbdOveray(null, null);
 
@@ -48,6 +53,7 @@ namespace DBD_perk
             repositionTimer.Tick += new EventHandler(UpdateDbdOveray); 
             repositionTimer.Start();            
         }
+
 
         private void UpdateDbdOveray(object sender, EventArgs e)
         {
@@ -66,7 +72,7 @@ namespace DBD_perk
                 this.Close();
             }
             SetRect(dbdRect);
-            //GetPerkImage();
+            
         }
 
         private void SetRect(Rect rect)
@@ -93,9 +99,36 @@ namespace DBD_perk
                 graphics.CopyFromScreen(dbdRect.Left + dbdRect.Width - imageWidth, dbdRect.Top + dbdRect.Height -imageHeight, 0, 0, new System.Drawing.Size(imageWidth, imageHeight), CopyPixelOperation.SourceCopy);
             }            
             var resize = new Bitmap(bmp,new System.Drawing.Size(320,320));
-            resize.Save("test.png", ImageFormat.Png);
+
+            resize.Save("test2.png", ImageFormat.Png);
             
         }
+
+        private List<PerkInfo> matchedPerkInfo = new List<PerkInfo>();
+        public void CompareImage()
+        {
+            var infos = PerkInfoLoader.infos;
+            var screenshot = new Mat("test.png",ImreadModes.Grayscale);
+            //screenshot.ConvertTo(screenshot, screenshot.Type(), 1.2, 0);
+            //screenshot.SaveImage("temp.png");
+            
+            
+            foreach(var info in infos)
+            {
+                if (PerkImageMatcher.match(screenshot, info.image))
+                {
+                    //MessageBox.Show($"{info.fileName} 활성화 일치");
+                    matchedPerkInfo.Add(info);
+                }
+
+                //if (PerkImageMatcher.match(screenshot, info.darkerImage))
+                //{
+                //    MessageBox.Show($"{info.fileName} 비활성화 일치");                
+                //}
+
+            }            
+        }
+
     }
 
 

@@ -8,10 +8,10 @@ namespace DBD_perk
 {
     public static class PerkImageMatcher
     {
-        private static bool matched(Bitmap screenshot, Bitmap perk)
+        public static bool match(Mat screenMat, Mat perkMat)
         {
-            using (Mat screenMat = OpenCvSharp.Extensions.BitmapConverter.ToMat(screenshot))            
-            using (Mat perkMat = OpenCvSharp.Extensions.BitmapConverter.ToMat(perk))
+            //using (Mat screenMat = OpenCvSharp.Extensions.BitmapConverter.ToMat(screenshot))            
+            //using (Mat perkMat = OpenCvSharp.Extensions.BitmapConverter.ToMat(perk))
             using (Mat result = new Mat())
             {                
                 Cv2.MatchTemplate(screenMat, perkMat, result, TemplateMatchModes.CCoeffNormed);
@@ -20,7 +20,7 @@ namespace DBD_perk
                 double minval, maxval;
                 Cv2.MinMaxLoc(result, out minval, out maxval, out minloc, out maxloc);
 
-                var threshold = 0.8;
+                var threshold = 0.65;
 
                 return maxval >= threshold;               
 
