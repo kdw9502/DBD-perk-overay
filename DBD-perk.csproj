@@ -334,6 +334,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Costura.Fody" Version="4.1.0" />
     <PackageReference Include="OpenCvSharp4" Version="4.4.0.20200725" />
     <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.4.0.20200725" />
   </ItemGroup>

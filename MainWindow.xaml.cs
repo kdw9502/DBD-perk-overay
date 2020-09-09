@@ -7,6 +7,7 @@ using System.Drawing.Imaging;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Threading;
 
 namespace DBD_perk
@@ -28,6 +29,7 @@ namespace DBD_perk
         IntPtr dbdHandle;
         Rect dbdRect;
         Bitmap screenshot;
+        readonly string dbdProcessName = "DeadByDaylight-Win64-Shipping";
 
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
@@ -41,6 +43,10 @@ namespace DBD_perk
 
         //[DllImport("user32.dll")]
         //static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int count);
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr GetWindowThreadProcessId(IntPtr hWnd, out uint ProcessId);
+
 
         public MainWindow()
         {
@@ -73,7 +79,9 @@ namespace DBD_perk
                 FindOutPerks();
                 PerkImage.Source = null;
                 Description.Text = "게임 진행중이 아닙니다.";
-                
+
+                HideWhenDBDIsBackGround();
+
                 return;
             }
             
@@ -87,9 +95,21 @@ namespace DBD_perk
                 FindOutPerks();
                 nowDisplayingPerkIndex = -1;
             }
-            nowDisplayingPerkIndex++;
+            nowDisplayingPerkIndex++;            
+        }
 
-            
+        private void HideWhenDBDIsBackGround()
+        {
+            IntPtr hwnd = GetForegroundWindow();
+            uint pid;
+            GetWindowThreadProcessId(hwnd, out pid);
+            Process p = Process.GetProcessById((int)pid);
+
+            if (dbdProcess.Id != p.Id)
+                PerkCanvas.Visibility = Visibility.Hidden;
+            else
+                PerkCanvas.Visibility = Visibility.Visible;
+
         }
 
         private void UpdateGUI(int index)
@@ -112,7 +132,7 @@ namespace DBD_perk
 
         private void UpdateDbdOveray(object sender, EventArgs e)
         {
-            Process[] processes = Process.GetProcessesByName("DeadByDaylight-Win64-Shipping");
+            Process[] processes = Process.GetProcessesByName(dbdProcessName);
 
             try
             {
