@@ -80,7 +80,7 @@ namespace DBD_perk
                 PerkImage.Source = null;
                 Description.Text = "게임 진행중이 아닙니다.";
 
-                HideWhenDBDIsBackGround();
+                //HideWhenDBDIsBackGround();
 
                 return;
             }
@@ -114,7 +114,7 @@ namespace DBD_perk
 
         private void UpdateGUI(int index)
         {
-            PerkImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri($"pack://application:,,,/resources/Perks/{matchedPerkInfo[index].fileName}.png"));          
+            PerkImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri($"{AppDomain.CurrentDomain.BaseDirectory}/resources/perks/{matchedPerkInfo[index].fileName}.png"));          
 
             Description.Text = matchedPerkInfo[index].desc;
         }
@@ -197,6 +197,5 @@ namespace DBD_perk
         }
 
     }
-
 
 }
