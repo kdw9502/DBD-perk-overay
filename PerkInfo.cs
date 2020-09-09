@@ -1,6 +1,7 @@
 ﻿using OpenCvSharp;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.IO;
 using System.Text;
@@ -9,13 +10,19 @@ using System.Text.Json.Serialization;
 
 namespace DBD_perk
 {
-    public class PerkInfo
+    public class PerkInfo: IEquatable<PerkInfo>
     {
         public string name { get; set; }
         public string fileName { get; set; }
         public string displayName { get; set; }
         public string desc { get; set; }
         public Mat image { get; set; }
+        public double matchRate { get; set; }
+
+        public bool Equals([AllowNull] PerkInfo other)
+        {
+            return fileName == other.fileName;
+        }
     }
 
     public static class PerkInfoLoader

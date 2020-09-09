@@ -8,8 +8,8 @@
         AllowsTransparency="True"
         WindowStyle="None"
         Title="MainWindow" Height="1080" Width="1920" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent">
-    <Canvas x:Name="PerkCanvas" HorizontalAlignment="Center" VerticalAlignment="Top" Width="700" Height="350">
-        <Rectangle Height="128" Stroke="Black" Width="700" Opacity="0.5">
+    <Canvas x:Name="PerkCanvas" HorizontalAlignment="Center" VerticalAlignment="Top" Width="999.8" Height="350">
+        <Rectangle Height="128" Stroke="Black" Width="1000" Opacity="0.5">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FD000000"/>
@@ -18,9 +18,9 @@
             </Rectangle.Fill>
         </Rectangle>
         <Image x:Name="PerkBG" Height="128" Width="128" Stretch="Fill" Source="resources/bg.png" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Image x:Name="PerkImgae" Height="128" Width="128" Stretch="Fill" Source="resources/Perks/aceInTheHole.png" Canvas.Left="0
+        <Image x:Name="PerkImage" Height="128" Width="128" Stretch="Fill" Source="resources/Perks/aceInTheHole.png" Canvas.Left="0
                " HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="0"/>
-        <TextBlock TextWrapping="Wrap" Canvas.Left="133" Height="128" Width="567" Foreground="White" Text="Default Text For Perk" FontSize="16"/>
+        <TextBlock x:Name="Description" TextWrapping="Wrap" Canvas.Left="133" Height="118" Width="867" Foreground="White" Text="성공적으로 시작되었습니다." FontSize="20" Canvas.Top="10"/>
 
     </Canvas>
 </Window>

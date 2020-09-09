@@ -8,7 +8,7 @@ namespace DBD_perk
 {
     public static class PerkImageMatcher
     {
-        public static bool match(Mat screenMat, Mat perkMat)
+        public static (bool matched, double matchRate) match(Mat screenMat, Mat perkMat)
         {
             //using (Mat screenMat = OpenCvSharp.Extensions.BitmapConverter.ToMat(screenshot))            
             //using (Mat perkMat = OpenCvSharp.Extensions.BitmapConverter.ToMat(perk))
@@ -20,9 +20,9 @@ namespace DBD_perk
                 double minval, maxval;
                 Cv2.MinMaxLoc(result, out minval, out maxval, out minloc, out maxloc);
 
-                var threshold = 0.65;
+                var threshold = 0.75;
 
-                return maxval >= threshold;               
+                return (maxval >= threshold, maxval);               
 
             }
         }       

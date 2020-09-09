@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows;
-using System.Windows.Documents;
 using System.Windows.Threading;
 
 namespace DBD_perk
@@ -23,9 +23,11 @@ namespace DBD_perk
             public int Width => Right - Left;
         }
         DispatcherTimer repositionTimer = new DispatcherTimer();
+        DispatcherTimer perkScanTimer = new DispatcherTimer();
         Process dbdProcess;
         IntPtr dbdHandle;
         Rect dbdRect;
+        Bitmap screenshot;
 
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
@@ -34,22 +36,77 @@ namespace DBD_perk
         [DllImport("user32.dll")]
         public static extern bool GetWindowRect(IntPtr hwnd, ref Rect rectangle);
 
+        [DllImport("user32.dll")]
+        static extern IntPtr GetForegroundWindow();
+
+        //[DllImport("user32.dll")]
+        //static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int count);
+
         public MainWindow()
         {
             InitializeComponent();
-            PerkInfoLoader.load();
-            CompareImage();
-            StartRepositionTimer();
-            //GetPerkImage();
 
+            PerkInfoLoader.load();
+            
+            StartRepositionTimer();
+            StartScanPerkAndDiplayTimer();
+            ShowInTaskbar = true;
             Topmost = true;
         }
+        private readonly double perkDiplayingDelay = 5.0;
+        private void StartScanPerkAndDiplayTimer()
+        {
+            perkScanTimer.Interval = TimeSpan.FromSeconds(perkDiplayingDelay);
+            perkScanTimer.Tick += new EventHandler(UpdateGUIAndScan);
+            perkScanTimer.Start();
+        }
+
+        private int nowDisplayingPerkIndex = 0;
+        private void UpdateGUIAndScan(object sender, EventArgs e)
+        {
+            var perkCount = matchedPerkInfo.Count;
+
+
+            if (perkCount == 0)
+            {
+                GetPerkImage();
+                FindOutPerks();
+                PerkImage.Source = null;
+                Description.Text = "게임 진행중이 아닙니다.";
+                
+                return;
+            }
+            
+
+            UpdateGUI(nowDisplayingPerkIndex);
+
+            bool isLastPerk = nowDisplayingPerkIndex + 1 == perkCount;
+            if (isLastPerk)
+            {
+                GetPerkImage();
+                FindOutPerks();
+                nowDisplayingPerkIndex = -1;
+            }
+            nowDisplayingPerkIndex++;
+
+            
+        }
+
+        private void UpdateGUI(int index)
+        {
+            //string packUri = $"pack://application:,,,/AssemblyName;resources/Perks/{matchedPerkInfo[index].fileName}.png";
+            //PerkImage.Source = new System.Windows.Media.ImageSourceConverter().ConvertFromString(packUri) as System.Windows.Media.ImageSource;
+            PerkImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri($"pack://application:,,,/resources/Perks/{matchedPerkInfo[index].fileName}.png"));          
+
+            Description.Text = matchedPerkInfo[index].desc;
+        }
+
 
         private void StartRepositionTimer()
         {
             UpdateDbdOveray(null, null);
 
-            repositionTimer.Interval = TimeSpan.FromMilliseconds(0.5);
+            repositionTimer.Interval = TimeSpan.FromSeconds(0.5);
             repositionTimer.Tick += new EventHandler(UpdateDbdOveray); 
             repositionTimer.Start();            
         }
@@ -100,28 +157,26 @@ namespace DBD_perk
             }            
             var resize = new Bitmap(bmp,new System.Drawing.Size(320,320));
 
-            resize.Save("test2.png", ImageFormat.Png);
-            
+            screenshot = resize;
         }
 
         private List<PerkInfo> matchedPerkInfo = new List<PerkInfo>();
-        public void CompareImage()
+        public void FindOutPerks()
         {
             var infos = PerkInfoLoader.infos;
-            var screenshot = new Mat("test.png",ImreadModes.Grayscale);
-            //screenshot.ConvertTo(screenshot, screenshot.Type(), 1.2, 0);
-            //screenshot.SaveImage("temp.png");
-            
-            
-            foreach(var info in infos)
+            Mat screenshotMat = OpenCvSharp.Extensions.BitmapConverter.ToMat(screenshot);
+            Cv2.CvtColor(screenshotMat, screenshotMat, ColorConversionCodes.BGR2GRAY);
+
+            matchedPerkInfo.Clear();
+
+            foreach (var info in infos)
             {
-                if (PerkImageMatcher.match(screenshot, info.image))
-                {
-                    //MessageBox.Show($"{info.fileName} 활성화 일치");
+                var (matched,matchRate) = PerkImageMatcher.match(screenshotMat, info.image);
+                info.matchRate = matchRate;
+                if (matched)
+                {               
                     matchedPerkInfo.Add(info);
-                }
-
-
+                }            
             }            
         }
 
