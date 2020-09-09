@@ -121,10 +121,6 @@ namespace DBD_perk
                     matchedPerkInfo.Add(info);
                 }
 
-                //if (PerkImageMatcher.match(screenshot, info.darkerImage))
-                //{
-                //    MessageBox.Show($"{info.fileName} 비활성화 일치");                
-                //}
 
             }            
         }

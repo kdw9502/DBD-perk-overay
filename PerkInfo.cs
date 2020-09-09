@@ -16,7 +16,6 @@ namespace DBD_perk
         public string displayName { get; set; }
         public string desc { get; set; }
         public Mat image { get; set; }
-        public Mat darkerImage { get; set; }
     }
 
     public static class PerkInfoLoader
@@ -31,21 +30,14 @@ namespace DBD_perk
 
             foreach(var info in infos)
             {
-                var image = new Bitmap($"../../../resources/Perks/{info.fileName}.png");
-                image = new Bitmap(image, new System.Drawing.Size(103, 103));
+                var image = new Bitmap($"../../../resources/perks_crop/{info.fileName}.png");
+                image = new Bitmap(image, new System.Drawing.Size(51, 51));
                 Mat origin = OpenCvSharp.Extensions.BitmapConverter.ToMat(image);
                 //Mat temp = new Mat();
 
                 Cv2.CvtColor(origin, origin, ColorConversionCodes.BGR2GRAY);                
 
                 info.image = origin;
-
-                //origin.CopyTo(temp);
-                //origin.ConvertTo(temp, origin.Type(), 0.35,0);
-                //if (info.fileName == "noOneEscapesDeath")
-                //    temp.SaveImage("noOne.png");
-
-                //info.darkerImage = temp;       
             }
         }
 
