@@ -5,7 +5,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>DBD_perk</RootNamespace>
     <UseWPF>true</UseWPF>
-    <AssemblyName>DBD-perk</AssemblyName>
+    <AssemblyName>DBD_perk_overay</AssemblyName>
+    <ApplicationIcon>bg.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -20,6 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Font\NanumBarunGothic.ttf" />
+    <None Remove="Font\NanumBarunGothicBold.ttf" />
+    <None Remove="Font\NanumBarunGothicLight.ttf" />
+    <None Remove="Font\NanumBarunGothicUltraLight.ttf" />
     <None Remove="resources\bg.png" />
     <None Remove="resources\Perks\aceInTheHole.png" />
     <None Remove="resources\Perks\adrenaline.png" />
@@ -173,6 +178,158 @@
     <None Remove="resources\Perks\whispers.png" />
     <None Remove="resources\Perks\windowsOfOpportunity.png" />
     <None Remove="resources\Perks\zanshinTactics.png" />
+    <None Remove="resources\perks_crop\aceInTheHole.png" />
+    <None Remove="resources\perks_crop\adrenaline.png" />
+    <None Remove="resources\perks_crop\aftercare.png" />
+    <None Remove="resources\perks_crop\agitation.png" />
+    <None Remove="resources\perks_crop\alert.png" />
+    <None Remove="resources\perks_crop\aNursesCalling.png" />
+    <None Remove="resources\perks_crop\anyMeansNecessary.png" />
+    <None Remove="resources\perks_crop\autodidact.png" />
+    <None Remove="resources\perks_crop\babySitter.png" />
+    <None Remove="resources\perks_crop\balancedLanding.png" />
+    <None Remove="resources\perks_crop\bamboozle.png" />
+    <None Remove="resources\perks_crop\BBQAndChili.png" />
+    <None Remove="resources\perks_crop\beastOfPrey.png" />
+    <None Remove="resources\perks_crop\betterTogether.png" />
+    <None Remove="resources\perks_crop\bitterMurmur.png" />
+    <None Remove="resources\perks_crop\bloodEcho.png" />
+    <None Remove="resources\perks_crop\bloodhound.png" />
+    <None Remove="resources\perks_crop\bloodPact.png" />
+    <None Remove="resources\perks_crop\bloodWarden.png" />
+    <None Remove="resources\perks_crop\boilOver.png" />
+    <None Remove="resources\perks_crop\bond.png" />
+    <None Remove="resources\perks_crop\borrowedTime.png" />
+    <None Remove="resources\perks_crop\botanyKnowledge.png" />
+    <None Remove="resources\perks_crop\breakdown.png" />
+    <None Remove="resources\perks_crop\breakout.png" />
+    <None Remove="resources\perks_crop\brutalStrength.png" />
+    <None Remove="resources\perks_crop\buckleUp.png" />
+    <None Remove="resources\perks_crop\calmSpirit.png" />
+    <None Remove="resources\perks_crop\camaraderie.png" />
+    <None Remove="resources\perks_crop\corruptIntervention.png" />
+    <None Remove="resources\perks_crop\coulrophobia.png" />
+    <None Remove="resources\perks_crop\cruelConfinement.png" />
+    <None Remove="resources\perks_crop\danceWithMe.png" />
+    <None Remove="resources\perks_crop\darkDevotion.png" />
+    <None Remove="resources\perks_crop\darkSense.png" />
+    <None Remove="resources\perks_crop\deadHard.png" />
+    <None Remove="resources\perks_crop\deadManSwitch.png" />
+    <None Remove="resources\perks_crop\deathbound.png" />
+    <None Remove="resources\perks_crop\decisiveStrike.png" />
+    <None Remove="resources\perks_crop\deerstalker.png" />
+    <None Remove="resources\perks_crop\dejaVu.png" />
+    <None Remove="resources\perks_crop\deliverance.png" />
+    <None Remove="resources\perks_crop\detectivesHunch.png" />
+    <None Remove="resources\perks_crop\devourHope.png" />
+    <None Remove="resources\perks_crop\discordance.png" />
+    <None Remove="resources\perks_crop\distortion.png" />
+    <None Remove="resources\perks_crop\distressing.png" />
+    <None Remove="resources\perks_crop\diversion.png" />
+    <None Remove="resources\perks_crop\dyingLight.png" />
+    <None Remove="resources\perks_crop\empathy.png" />
+    <None Remove="resources\perks_crop\enduring.png" />
+    <None Remove="resources\perks_crop\fireUp.png" />
+    <None Remove="resources\perks_crop\fixated.png" />
+    <None Remove="resources\perks_crop\flipFlop.png" />
+    <None Remove="resources\perks_crop\forcedPenance.png" />
+    <None Remove="resources\perks_crop\forThePeople.png" />
+    <None Remove="resources\perks_crop\franklinsLoss.png" />
+    <None Remove="resources\perks_crop\furtiveChase.png" />
+    <None Remove="resources\perks_crop\gearHead.png" />
+    <None Remove="resources\perks_crop\generatorOvercharge.png" />
+    <None Remove="resources\perks_crop\hangmansTrick.png" />
+    <None Remove="resources\perks_crop\hatred.png" />
+    <None Remove="resources\perks_crop\hauntedGround.png" />
+    <None Remove="resources\perks_crop\headOn.png" />
+    <None Remove="resources\perks_crop\hexRetribution.png" />
+    <None Remove="resources\perks_crop\hope.png" />
+    <None Remove="resources\perks_crop\huntressLullaby.png" />
+    <None Remove="resources\perks_crop\imAllEars.png" />
+    <None Remove="resources\perks_crop\infectiousFright.png" />
+    <None Remove="resources\perks_crop\innerStrength.png" />
+    <None Remove="resources\perks_crop\insidious.png" />
+    <None Remove="resources\perks_crop\ironGrasp.png" />
+    <None Remove="resources\perks_crop\ironMaiden.png" />
+    <None Remove="resources\perks_crop\ironWill.png" />
+    <None Remove="resources\perks_crop\kindred.png" />
+    <None Remove="resources\perks_crop\knockOut.png" />
+    <None Remove="resources\perks_crop\leader.png" />
+    <None Remove="resources\perks_crop\leftBehind.png" />
+    <None Remove="resources\perks_crop\lightborn.png" />
+    <None Remove="resources\perks_crop\lightweight.png" />
+    <None Remove="resources\perks_crop\lithe.png" />
+    <None Remove="resources\perks_crop\luckyBreak.png" />
+    <None Remove="resources\perks_crop\madGrit.png" />
+    <None Remove="resources\perks_crop\makeYourChoice.png" />
+    <None Remove="resources\perks_crop\mettleOfMan.png" />
+    <None Remove="resources\perks_crop\mindBreaker.png" />
+    <None Remove="resources\perks_crop\monitorAndAbuse.png" />
+    <None Remove="resources\perks_crop\monstrousShrine.png" />
+    <None Remove="resources\perks_crop\nemesis.png" />
+    <None Remove="resources\perks_crop\noMither.png" />
+    <None Remove="resources\perks_crop\noOneEscapesDeath.png" />
+    <None Remove="resources\perks_crop\noOneLeftBehind.png" />
+    <None Remove="resources\perks_crop\objectOfObsession.png" />
+    <None Remove="resources\perks_crop\offTheRecord.png" />
+    <None Remove="resources\perks_crop\openHanded.png" />
+    <None Remove="resources\perks_crop\overwhelmingPresence.png" />
+    <None Remove="resources\perks_crop\pharmacy.png" />
+    <None Remove="resources\perks_crop\playWithYourFood.png" />
+    <None Remove="resources\perks_crop\plunderersInstinct.png" />
+    <None Remove="resources\perks_crop\poised.png" />
+    <None Remove="resources\perks_crop\popGoesTheWeasel.png" />
+    <None Remove="resources\perks_crop\predator.png" />
+    <None Remove="resources\perks_crop\premonition.png" />
+    <None Remove="resources\perks_crop\proveThyself.png" />
+    <None Remove="resources\perks_crop\quickAndQuiet.png" />
+    <None Remove="resources\perks_crop\redHerring.png" />
+    <None Remove="resources\perks_crop\rememberMe.png" />
+    <None Remove="resources\perks_crop\repressedAlliance.png" />
+    <None Remove="resources\perks_crop\resilience.png" />
+    <None Remove="resources\perks_crop\ruin.png" />
+    <None Remove="resources\perks_crop\saboteur.png" />
+    <None Remove="resources\perks_crop\saveTheBestForLast.png" />
+    <None Remove="resources\perks_crop\secondWind.png" />
+    <None Remove="resources\perks_crop\selfCare.png" />
+    <None Remove="resources\perks_crop\shadowborn.png" />
+    <None Remove="resources\perks_crop\slipperyMeat.png" />
+    <None Remove="resources\perks_crop\sloppyButcher.png" />
+    <None Remove="resources\perks_crop\smallGame.png" />
+    <None Remove="resources\perks_crop\soleSurvivor.png" />
+    <None Remove="resources\perks_crop\solidarity.png" />
+    <None Remove="resources\perks_crop\soulGuard.png" />
+    <None Remove="resources\perks_crop\spiesFromTheShadows.png" />
+    <None Remove="resources\perks_crop\spineChill.png" />
+    <None Remove="resources\perks_crop\spiritFury.png" />
+    <None Remove="resources\perks_crop\sprintBurst.png" />
+    <None Remove="resources\perks_crop\stakeOut.png" />
+    <None Remove="resources\perks_crop\streetwise.png" />
+    <None Remove="resources\perks_crop\stridor.png" />
+    <None Remove="resources\perks_crop\surge.png" />
+    <None Remove="resources\perks_crop\surveillance.png" />
+    <None Remove="resources\perks_crop\technician.png" />
+    <None Remove="resources\perks_crop\tenacity.png" />
+    <None Remove="resources\perks_crop\territorialImperative.png" />
+    <None Remove="resources\perks_crop\thatanophobia.png" />
+    <None Remove="resources\perks_crop\theThirdSeal.png" />
+    <None Remove="resources\perks_crop\thisIsNotHappening.png" />
+    <None Remove="resources\perks_crop\thrillingTremors.png" />
+    <None Remove="resources\perks_crop\thrillOfTheHunt.png" />
+    <None Remove="resources\perks_crop\tinkerer.png" />
+    <None Remove="resources\perks_crop\trailOfTorment.png" />
+    <None Remove="resources\perks_crop\unbreakable.png" />
+    <None Remove="resources\perks_crop\unnervingPresence.png" />
+    <None Remove="resources\perks_crop\unrelenting.png" />
+    <None Remove="resources\perks_crop\upTheAnte.png" />
+    <None Remove="resources\perks_crop\urbanEvasion.png" />
+    <None Remove="resources\perks_crop\vigil.png" />
+    <None Remove="resources\perks_crop\wakeUp.png" />
+    <None Remove="resources\perks_crop\wellMakeIt.png" />
+    <None Remove="resources\perks_crop\wereGonnaLiveForever.png" />
+    <None Remove="resources\perks_crop\whispers.png" />
+    <None Remove="resources\perks_crop\windowsOfOpportunity.png" />
+    <None Remove="resources\perks_crop\zanshinTactics.png" />
     <None Remove="resources\perk_info.txt" />
   </ItemGroup>
 
@@ -182,9 +339,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Font\NanumBarunGothic.ttf" />
+    <Resource Include="Font\NanumBarunGothicBold.ttf" />
+    <Resource Include="Font\NanumBarunGothicLight.ttf" />
+    <Resource Include="Font\NanumBarunGothicUltraLight.ttf" />
     <Resource Include="resources\bg.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <EmbeddedResource Include="resources\perk_info.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Resource Include="resources\Perks\aceInTheHole.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -641,9 +805,462 @@
     <Resource Include="resources\Perks\zanshinTactics.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="resources\perk_info.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    <EmbeddedResource Include="resources\perks_crop\aceInTheHole.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\adrenaline.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\aftercare.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\agitation.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\alert.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\aNursesCalling.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\anyMeansNecessary.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\autodidact.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\babySitter.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\balancedLanding.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\bamboozle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\BBQAndChili.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\beastOfPrey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\betterTogether.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\bitterMurmur.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\bloodEcho.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\bloodhound.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\bloodPact.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\bloodWarden.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\boilOver.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\bond.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\borrowedTime.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\botanyKnowledge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\breakdown.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\breakout.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\brutalStrength.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\buckleUp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\calmSpirit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\camaraderie.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\corruptIntervention.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\coulrophobia.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\cruelConfinement.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\danceWithMe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\darkDevotion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\darkSense.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\deadHard.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\deadManSwitch.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\deathbound.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\decisiveStrike.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\deerstalker.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\dejaVu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\deliverance.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\detectivesHunch.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\devourHope.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\discordance.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\distortion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\distressing.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\diversion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\dyingLight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\empathy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\enduring.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\fireUp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\fixated.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\flipFlop.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\forcedPenance.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\forThePeople.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\franklinsLoss.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\furtiveChase.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\gearHead.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\generatorOvercharge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\hangmansTrick.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\hatred.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\hauntedGround.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\headOn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\hexRetribution.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\hope.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\huntressLullaby.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\imAllEars.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\infectiousFright.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\innerStrength.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\insidious.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\ironGrasp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\ironMaiden.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\ironWill.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\kindred.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\knockOut.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\leader.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\leftBehind.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\lightborn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\lightweight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\lithe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\luckyBreak.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\madGrit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\makeYourChoice.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\mettleOfMan.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\mindBreaker.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\monitorAndAbuse.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\monstrousShrine.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\nemesis.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\noMither.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\noOneEscapesDeath.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\noOneLeftBehind.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\objectOfObsession.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\offTheRecord.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\openHanded.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\overwhelmingPresence.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\pharmacy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\playWithYourFood.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\plunderersInstinct.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\poised.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\popGoesTheWeasel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\predator.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\premonition.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\proveThyself.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\quickAndQuiet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\redHerring.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\rememberMe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\repressedAlliance.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\resilience.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\ruin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\saboteur.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\saveTheBestForLast.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\secondWind.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\selfCare.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\shadowborn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\slipperyMeat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\sloppyButcher.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\smallGame.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\soleSurvivor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\solidarity.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\soulGuard.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\spiesFromTheShadows.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\spineChill.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\spiritFury.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\sprintBurst.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\stakeOut.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\streetwise.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\stridor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\surge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\surveillance.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\technician.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\tenacity.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\territorialImperative.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\thatanophobia.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\theThirdSeal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\thisIsNotHappening.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\thrillingTremors.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\thrillOfTheHunt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\tinkerer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\trailOfTorment.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\unbreakable.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\unnervingPresence.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\unrelenting.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\upTheAnte.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\urbanEvasion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\vigil.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\wakeUp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\wellMakeIt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\wereGonnaLiveForever.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\whispers.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\windowsOfOpportunity.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\zanshinTactics.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>

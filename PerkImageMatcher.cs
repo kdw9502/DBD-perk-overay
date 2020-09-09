@@ -10,8 +10,6 @@ namespace DBD_perk
     {
         public static (bool matched, double matchRate) match(Mat screenMat, Mat perkMat)
         {
-            //using (Mat screenMat = OpenCvSharp.Extensions.BitmapConverter.ToMat(screenshot))            
-            //using (Mat perkMat = OpenCvSharp.Extensions.BitmapConverter.ToMat(perk))
             using (Mat result = new Mat())
             {                
                 Cv2.MatchTemplate(screenMat, perkMat, result, TemplateMatchModes.CCoeffNormed);

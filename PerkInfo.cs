@@ -30,17 +30,16 @@ namespace DBD_perk
         public static List<PerkInfo> infos = new List<PerkInfo>();
         public static void load()
         {
-            var jsonUtf8Bytes = File.ReadAllBytes("../../../resources/new_perk_info.txt");
+            var jsonUtf8Bytes = File.ReadAllBytes($"resources/perk_info.txt");
             var readOnlySpan = new ReadOnlySpan<byte>(jsonUtf8Bytes);
             var perks = JsonSerializer.Deserialize<Perks>(readOnlySpan);
             infos = perks.perks;
 
             foreach(var info in infos)
-            {
-                var image = new Bitmap($"../../../resources/perks_crop/{info.fileName}.png");
+            {                
+                var image = new Bitmap($"resources/perks_crop/{info.fileName}.png");
                 image = new Bitmap(image, new System.Drawing.Size(51, 51));
-                Mat origin = OpenCvSharp.Extensions.BitmapConverter.ToMat(image);
-                //Mat temp = new Mat();
+                Mat origin = OpenCvSharp.Extensions.BitmapConverter.ToMat(image);                
 
                 Cv2.CvtColor(origin, origin, ColorConversionCodes.BGR2GRAY);                
 

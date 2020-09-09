@@ -94,8 +94,6 @@ namespace DBD_perk
 
         private void UpdateGUI(int index)
         {
-            //string packUri = $"pack://application:,,,/AssemblyName;resources/Perks/{matchedPerkInfo[index].fileName}.png";
-            //PerkImage.Source = new System.Windows.Media.ImageSourceConverter().ConvertFromString(packUri) as System.Windows.Media.ImageSource;
             PerkImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri($"pack://application:,,,/resources/Perks/{matchedPerkInfo[index].fileName}.png"));          
 
             Description.Text = matchedPerkInfo[index].desc;
@@ -145,19 +143,17 @@ namespace DBD_perk
 
         public void GetPerkImage()
         {
-            int imageWidth = dbdRect.Width/8;
-            int imageHeight = imageWidth;
+            int imageWidth = 320;
+            int imageHeight = 320;
 
-            var bmp = new Bitmap(imageWidth, imageHeight, PixelFormat.Format32bppArgb);
+            screenshot = new Bitmap(imageWidth, imageHeight, PixelFormat.Format32bppArgb);
 
-            using (Graphics graphics = Graphics.FromImage(bmp))
+            using (Graphics graphics = Graphics.FromImage(screenshot))
             {
                 
                 graphics.CopyFromScreen(dbdRect.Left + dbdRect.Width - imageWidth, dbdRect.Top + dbdRect.Height -imageHeight, 0, 0, new System.Drawing.Size(imageWidth, imageHeight), CopyPixelOperation.SourceCopy);
             }            
-            var resize = new Bitmap(bmp,new System.Drawing.Size(320,320));
 
-            screenshot = resize;
         }
 
         private List<PerkInfo> matchedPerkInfo = new List<PerkInfo>();
