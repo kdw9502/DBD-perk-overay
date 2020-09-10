@@ -80,17 +80,17 @@ namespace DBD_perk
             GetPerkImage();
             FindOutPerks();
 
+            if (hideWhenBackGround)
+            {
+                HideOveray();
+            }
+
             if (matchedPerkInfo.Count == 0)
             {
                 PerkImage.Source = null;
                 Description.Text = "게임 진행중이 아닙니다.";                
 
                 return;
-            }
-
-            if(hideWhenBackGround)
-            {
-                HideOveray();
             }
 
             if (nowDisplayingPerkIndex >= matchedPerkInfo.Count)
