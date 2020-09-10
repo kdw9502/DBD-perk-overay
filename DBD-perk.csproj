@@ -332,6 +332,7 @@
     <None Remove="resources\perks_crop\zanshinTactics.png" />
     <None Remove="resources\perk_info.txt" />
     <None Remove="settings.txt" />
+    <None Remove="읽어주세요.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -1264,6 +1265,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="settings.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="읽어주세요.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

@@ -63,6 +63,8 @@ namespace DBD_perk
             ShowInTaskbar = true;
             Topmost = true;
         }
+
+        public bool hideWhenBackGround = true;
         private double perkDiplayingDelay = 5.0;
         private void StartScanPerkAndDiplayTimer()
         {
@@ -81,11 +83,14 @@ namespace DBD_perk
             if (matchedPerkInfo.Count == 0)
             {
                 PerkImage.Source = null;
-                Description.Text = "게임 진행중이 아닙니다.";
-
-                //HideWhenDBDIsBackGround();
+                Description.Text = "게임 진행중이 아닙니다.";                
 
                 return;
+            }
+
+            if(hideWhenBackGround)
+            {
+                HideOveray();
             }
 
             if (nowDisplayingPerkIndex >= matchedPerkInfo.Count)
@@ -98,7 +103,7 @@ namespace DBD_perk
             nowDisplayingPerkIndex++;            
         }
 
-        private void HideWhenDBDIsBackGround()
+        private void HideOveray()
         {
             IntPtr hwnd = GetForegroundWindow();
             uint pid;
@@ -203,6 +208,7 @@ namespace DBD_perk
             public int height { get; set; } = 192;
             public double displayTime { get; set; } = 5.0;
             public int perkSize { get; set; } = 128;
+            public bool hide_when_background { get; set; } = true;
 
             public void AdjustLimit()
             {
@@ -267,7 +273,7 @@ namespace DBD_perk
             perkDiplayingDelay = settings.displayTime;
             PerkColumn.Width = new GridLength(settings.perkSize);
             DescriptionColumn.Width = new GridLength(settings.width - settings.perkSize);
-
+            hideWhenBackGround = settings.hide_when_background;
         }
 
     }
