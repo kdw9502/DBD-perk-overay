@@ -8,19 +8,39 @@
         AllowsTransparency="True"
         WindowStyle="None"
         Title="데바데 퍽 표시기" Height="1080" Width="1920" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent">
-    <Canvas x:Name="PerkCanvas" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1100" Height="350">
-        <Rectangle Height="192" Width="1100" Opacity="0.5">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FD000000"/>
-                    <GradientStop Color="#33000000" Offset="1"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Image x:Name="PerkBG" Height="128" Width="128" Stretch="Fill" Source="resources/bg.png" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Image x:Name="PerkImage" Height="128" Width="128" Stretch="Fill" Source="resources/Perks/aceInTheHole.png" Canvas.Left="0
-               " HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="0"/>
-        <TextBlock x:Name="Description" TextWrapping="Wrap" Canvas.Left="133" Height="182" Width="967" Foreground="White" Text="성공적으로 시작되었습니다." FontSize="18" Canvas.Top="10" FontFamily="NanumBarunGothic" FontWeight="Normal" FontStyle="Normal"/>
+    <Canvas x:Name="PerkCanvas" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1100" Height="200">
+        <Grid>
+            <Rectangle Width="{Binding ElementName=PerkCanvas, Path=ActualWidth}" Height="{Binding ElementName=PerkCanvas, Path=ActualHeight}" Opacity="0.5" VerticalAlignment="Stretch">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FD000000"/>
+                        <GradientStop Color="#33000000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="PerkColumn" Width="128"/>
+                    <ColumnDefinition x:Name="DescriptionColumn"/>
+                </Grid.ColumnDefinitions>
+
+                <Image x:Name="PerkBG" Stretch="Fill" Source="resources/bg.png" Canvas.Left="0" Grid.Column="0" VerticalAlignment="Top"/>
+                <Image x:Name="PerkImage" Stretch="Fill" Grid.Column="0" VerticalAlignment="Top"/>                
+
+                <TextBlock x:Name="Description" TextWrapping="Wrap" Foreground="White" Text="성공적으로 시작되었습니다." FontSize="18" Canvas.Top="10" Grid.RowSpan="2" 
+                           Grid.Column="1" FontFamily="NanumBarunGothic" FontWeight="Normal" FontStyle="Normal" Margin="0,10,0,0" HorizontalAlignment="Stretch" IsEnabled="True"/>
+
+                <TextBlock x:Name="PerkName" TextWrapping="Wrap" Grid.Column="0" Text="" Foreground="White" FontSize="{Binding ElementName=Description, Path=FontSize}" 
+                           VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontFamily="NanumBarunGothic" TextAlignment="Center" IsEnabled="False" Grid.Row="1"> </TextBlock>                    
+
+            </Grid>
+
+        </Grid>       
 
     </Canvas>
 </Window>

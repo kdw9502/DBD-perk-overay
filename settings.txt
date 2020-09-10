@@ -1,0 +1,7 @@
+{
+  "fontSIze": 18,
+  "width": 1100,
+  "height": 192,
+  "displayTime": 5,
+  "perkSize": 128
+}

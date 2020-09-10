@@ -4,11 +4,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
+using System.Xml;
 
 namespace DBD_perk
 {
@@ -27,7 +30,7 @@ namespace DBD_perk
         DispatcherTimer perkScanTimer = new DispatcherTimer();
         Process dbdProcess;
         IntPtr dbdHandle;
-        Rect dbdRect;
+        public static Rect dbdRect;
         Bitmap screenshot;
         readonly string dbdProcessName = "DeadByDaylight-Win64-Shipping";
 
@@ -51,15 +54,16 @@ namespace DBD_perk
         public MainWindow()
         {
             InitializeComponent();
-
+            
             PerkInfoLoader.load();
             
             StartRepositionTimer();
+            ReadUserSettings();
             StartScanPerkAndDiplayTimer();
             ShowInTaskbar = true;
             Topmost = true;
         }
-        private readonly double perkDiplayingDelay = 5.0;
+        private double perkDiplayingDelay = 5.0;
         private void StartScanPerkAndDiplayTimer()
         {
             perkScanTimer.Interval = TimeSpan.FromSeconds(perkDiplayingDelay);
@@ -69,14 +73,13 @@ namespace DBD_perk
 
         private int nowDisplayingPerkIndex = 0;
         private void UpdateGUIAndScan(object sender, EventArgs e)
-        {
-            var perkCount = matchedPerkInfo.Count;
+        {           
 
+            GetPerkImage();
+            FindOutPerks();
 
-            if (perkCount == 0)
+            if (matchedPerkInfo.Count == 0)
             {
-                GetPerkImage();
-                FindOutPerks();
                 PerkImage.Source = null;
                 Description.Text = "게임 진행중이 아닙니다.";
 
@@ -84,17 +87,14 @@ namespace DBD_perk
 
                 return;
             }
-            
+
+            if (nowDisplayingPerkIndex >= matchedPerkInfo.Count)
+            {
+                nowDisplayingPerkIndex = 0;
+            }
 
             UpdateGUI(nowDisplayingPerkIndex);
 
-            bool isLastPerk = nowDisplayingPerkIndex + 1 == perkCount;
-            if (isLastPerk)
-            {
-                GetPerkImage();
-                FindOutPerks();
-                nowDisplayingPerkIndex = -1;
-            }
             nowDisplayingPerkIndex++;            
         }
 
@@ -143,8 +143,8 @@ namespace DBD_perk
             }
             catch (IndexOutOfRangeException ex)
             {
-                MessageBox.Show("실행중인 데바데를 찾지 못했습니다. 프로그램을 종료합니다.");
                 this.Close();
+                MessageBox.Show("실행중인 데바데를 찾지 못했습니다. 프로그램을 종료합니다.");                
             }
             SetRect(dbdRect);
             
@@ -196,6 +196,79 @@ namespace DBD_perk
             }            
         }
 
-    }
+        public class Settings
+        {
+            public int fontSIze { get; set; } = 18;
+            public int width { get; set; } = 1100;
+            public int height { get; set; } = 192;
+            public double displayTime { get; set; } = 5.0;
+            public int perkSize { get; set; } = 128;
 
+            public void AdjustLimit()
+            {
+                fontSIze = TrimInt(fontSIze, 10, 30);
+                perkSize = TrimInt(perkSize, 64, 512);
+                width = TrimInt(width, 512, 3840);
+                height = TrimInt(height, perkSize + fontSIze + 2, 2160);
+                displayTime = TrimDouble(displayTime, 1.0, 15.0);
+            }
+            private int TrimInt(int value,int min, int max)
+            {
+                if (value < min)
+                    return min;
+                if (value > max)
+                    return max;
+                return value;
+            }
+
+            private double TrimDouble(double value, double min, double max)
+            {
+                if (value < min)
+                    return min;
+                if (value > max)
+                    return max;
+                return value;
+            }
+        }
+
+        private void ReadUserSettings()
+        {
+
+            var settings = new Settings();
+
+            try
+            {
+                var jsonUtf8Bytes = File.ReadAllBytes($"settings.txt");
+                var readOnlySpan = new ReadOnlySpan<byte>(jsonUtf8Bytes);
+                settings = JsonSerializer.Deserialize<Settings>(readOnlySpan);
+            }
+            catch (FileNotFoundException ex)
+            {
+                MessageBox.Show("설정 파일을 읽을 수 없습니다. 기본 설정을 복구합니다.");
+            }
+            catch (IOException)
+            {
+                MessageBox.Show("설정 파일이 다른 프로그램에서 사용중입니다. 다른 프로그램을 끄고 다시 실행해주세요.");
+            }
+            settings.AdjustLimit();
+            SetUserSettings(settings);
+
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            var text = JsonSerializer.Serialize(new Settings(), options);
+            File.WriteAllText("settings.txt", text);
+
+            SetUserSettings(settings);
+        }
+        private void SetUserSettings(Settings settings)
+        {
+            PerkCanvas.Width = settings.width;
+            PerkCanvas.Height = settings.height;
+            Description.FontSize = settings.fontSIze;
+            perkDiplayingDelay = settings.displayTime;
+            PerkColumn.Width = new GridLength(settings.perkSize);
+            DescriptionColumn.Width = new GridLength(settings.width - settings.perkSize);
+
+        }
+
+    }
 }
