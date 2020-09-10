@@ -88,7 +88,7 @@ namespace DBD_perk
             if (matchedPerkInfo.Count == 0)
             {
                 PerkImage.Source = null;
-                Description.Text = "게임 진행중이 아닙니다.";                
+                Description.Text = "희생제 진행중이 아닙니다.";                
 
                 return;
             }
