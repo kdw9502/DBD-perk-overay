@@ -53,6 +53,7 @@
     <None Remove="resources\perks\breakout.png" />
     <None Remove="resources\perks\brutalStrength.png" />
     <None Remove="resources\perks\buckleUp.png" />
+    <None Remove="resources\perks\builtToLast.png" />
     <None Remove="resources\perks\calmSpirit.png" />
     <None Remove="resources\perks\camaraderie.png" />
     <None Remove="resources\perks\corruptIntervention.png" />
@@ -68,12 +69,14 @@
     <None Remove="resources\perks\deerstalker.png" />
     <None Remove="resources\perks\dejaVu.png" />
     <None Remove="resources\perks\deliverance.png" />
+    <None Remove="resources\perks\desperateMeasures.png" />
     <None Remove="resources\perks\detectivesHunch.png" />
     <None Remove="resources\perks\devourHope.png" />
     <None Remove="resources\perks\discordance.png" />
     <None Remove="resources\perks\distortion.png" />
     <None Remove="resources\perks\distressing.png" />
     <None Remove="resources\perks\diversion.png" />
+    <None Remove="resources\perks\dragonsGrip.png" />
     <None Remove="resources\perks\dyingLight.png" />
     <None Remove="resources\perks\empathy.png" />
     <None Remove="resources\perks\enduring.png" />
@@ -90,7 +93,9 @@
     <None Remove="resources\perks\hatred.png" />
     <None Remove="resources\perks\hauntedGround.png" />
     <None Remove="resources\perks\headOn.png" />
+    <None Remove="resources\perks\hexBloodFavor.png" />
     <None Remove="resources\perks\hexRetribution.png" />
+    <None Remove="resources\perks\hexUndying.png" />
     <None Remove="resources\perks\hope.png" />
     <None Remove="resources\perks\huntressLullaby.png" />
     <None Remove="resources\perks\imAllEars.png" />
@@ -172,6 +177,7 @@
     <None Remove="resources\perks\upTheAnte.png" />
     <None Remove="resources\perks\urbanEvasion.png" />
     <None Remove="resources\perks\vigil.png" />
+    <None Remove="resources\perks\visionary.png" />
     <None Remove="resources\perks\wakeUp.png" />
     <None Remove="resources\perks\wellMakeIt.png" />
     <None Remove="resources\perks\wereGonnaLiveForever.png" />
@@ -205,6 +211,7 @@
     <None Remove="resources\perks_crop\breakout.png" />
     <None Remove="resources\perks_crop\brutalStrength.png" />
     <None Remove="resources\perks_crop\buckleUp.png" />
+    <None Remove="resources\perks_crop\builtToLast.png" />
     <None Remove="resources\perks_crop\calmSpirit.png" />
     <None Remove="resources\perks_crop\camaraderie.png" />
     <None Remove="resources\perks_crop\corruptIntervention.png" />
@@ -220,12 +227,14 @@
     <None Remove="resources\perks_crop\deerstalker.png" />
     <None Remove="resources\perks_crop\dejaVu.png" />
     <None Remove="resources\perks_crop\deliverance.png" />
+    <None Remove="resources\perks_crop\desperateMeasures.png" />
     <None Remove="resources\perks_crop\detectivesHunch.png" />
     <None Remove="resources\perks_crop\devourHope.png" />
     <None Remove="resources\perks_crop\discordance.png" />
     <None Remove="resources\perks_crop\distortion.png" />
     <None Remove="resources\perks_crop\distressing.png" />
     <None Remove="resources\perks_crop\diversion.png" />
+    <None Remove="resources\perks_crop\dragonsGrip.png" />
     <None Remove="resources\perks_crop\dyingLight.png" />
     <None Remove="resources\perks_crop\empathy.png" />
     <None Remove="resources\perks_crop\enduring.png" />
@@ -242,7 +251,9 @@
     <None Remove="resources\perks_crop\hatred.png" />
     <None Remove="resources\perks_crop\hauntedGround.png" />
     <None Remove="resources\perks_crop\headOn.png" />
+    <None Remove="resources\perks_crop\hexBloodFavor.png" />
     <None Remove="resources\perks_crop\hexRetribution.png" />
+    <None Remove="resources\perks_crop\hexUndying.png" />
     <None Remove="resources\perks_crop\hope.png" />
     <None Remove="resources\perks_crop\huntressLullaby.png" />
     <None Remove="resources\perks_crop\imAllEars.png" />
@@ -324,6 +335,7 @@
     <None Remove="resources\perks_crop\upTheAnte.png" />
     <None Remove="resources\perks_crop\urbanEvasion.png" />
     <None Remove="resources\perks_crop\vigil.png" />
+    <None Remove="resources\perks_crop\visionary.png" />
     <None Remove="resources\perks_crop\wakeUp.png" />
     <None Remove="resources\perks_crop\wellMakeIt.png" />
     <None Remove="resources\perks_crop\wereGonnaLiveForever.png" />
@@ -349,6 +361,42 @@
     <Resource Include="resources\bg.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <EmbeddedResource Include="resources\perks\builtToLast.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks\desperateMeasures.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks\dragonsGrip.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks\hexBloodFavor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks\hexUndying.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks\visionary.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\builtToLast.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\desperateMeasures.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\dragonsGrip.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\hexBloodFavor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\hexUndying.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\perks_crop\visionary.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="resources\perk_info.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
