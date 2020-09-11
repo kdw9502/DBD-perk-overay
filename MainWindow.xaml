@@ -26,7 +26,7 @@
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition x:Name="PerkColumn" Width="128"/>
-                    <ColumnDefinition x:Name="DescriptionColumn"/>
+                    <ColumnDefinition x:Name="DescriptionColumn" Width="*"/>
                 </Grid.ColumnDefinitions>
 
                 <Image x:Name="PerkBG" Stretch="Fill" Source="resources/bg.png" Canvas.Left="0" Grid.Column="0" VerticalAlignment="Top"/>

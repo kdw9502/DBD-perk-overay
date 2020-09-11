@@ -10,6 +10,8 @@ using System.Runtime.InteropServices;
 using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Threading;
 using System.Xml;
 
@@ -34,6 +36,10 @@ namespace DBD_perk
         Bitmap screenshot;
         readonly string dbdProcessName = "DeadByDaylight-Win64-Shipping";
 
+        public bool hideWhenBackGround = true;
+        private double perkDiplayingDelay = 5.0;
+
+        public bool forceOff = false;
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         public static extern IntPtr FindWindow(string strClassName, string strWindowName);
@@ -47,7 +53,10 @@ namespace DBD_perk
 
         [DllImport("user32.dll")]
         public static extern IntPtr GetWindowThreadProcessId(IntPtr hWnd, out uint ProcessId);
-
+        [DllImport("user32.dll")]
+        public static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vlc);
+        [DllImport("user32.dll")]
+        public static extern bool UnregisterHotKey(IntPtr hWnd, int id);
 
         public MainWindow()
         {
@@ -58,12 +67,11 @@ namespace DBD_perk
             StartRepositionTimer();
             ReadUserSettings();
             StartScanPerkAndDiplayTimer();
+            
             ShowInTaskbar = true;
             Topmost = true;
         }
 
-        public bool hideWhenBackGround = true;
-        private double perkDiplayingDelay = 5.0;
         private void StartScanPerkAndDiplayTimer()
         {
             perkScanTimer.Interval = TimeSpan.FromSeconds(perkDiplayingDelay);
@@ -110,8 +118,11 @@ namespace DBD_perk
 
             if (dbdProcess.Id != p.Id)
                 PerkCanvas.Visibility = Visibility.Hidden;
-            else
+            else if (!forceOff)
+            {
                 PerkCanvas.Visibility = Visibility.Visible;
+            }
+                
 
         }
 
@@ -276,5 +287,43 @@ namespace DBD_perk
             hideWhenBackGround = settings.hide_when_background;
         }
 
+        #region Toggle_On_off
+        //https://social.technet.microsoft.com/wiki/contents/articles/30568.wpf-implementing-global-hot-keys.aspx
+
+        private const int HOTKEY_ID = 9000;
+        private IntPtr _windowHandle;
+        private HwndSource _source;
+        protected override void OnSourceInitialized(EventArgs e)
+        {
+            base.OnSourceInitialized(e);
+
+            _windowHandle = new WindowInteropHelper(this).Handle;
+            _source = HwndSource.FromHwnd(_windowHandle);
+            _source.AddHook(HwndHook);
+
+            //https://docs.microsoft.com/ko-kr/dotnet/api/system.windows.forms.keys?view=netcore-3.1                        
+            int f2_key = 113;
+
+            RegisterHotKey(_windowHandle, HOTKEY_ID, 0, f2_key);
+        }
+
+        private IntPtr HwndHook(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
+        {
+            const int WM_HOTKEY = 0x0312;
+            if (msg == WM_HOTKEY && wParam.ToInt32() == HOTKEY_ID)
+            {
+                PerkCanvas.Visibility = PerkCanvas.Visibility == Visibility.Hidden ? Visibility.Visible : Visibility.Hidden;
+                forceOff = PerkCanvas.Visibility == Visibility.Hidden;
+            }           
+            return IntPtr.Zero;
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            _source.RemoveHook(HwndHook);
+            UnregisterHotKey(_windowHandle, HOTKEY_ID);
+            base.OnClosed(e);
+        }
+        #endregion
     }
 }
