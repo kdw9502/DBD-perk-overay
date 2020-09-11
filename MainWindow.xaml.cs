@@ -117,7 +117,10 @@ namespace DBD_perk
             Process p = Process.GetProcessById((int)pid);
 
             if (dbdProcess.Id != p.Id)
+            {
                 PerkCanvas.Visibility = Visibility.Hidden;
+                forceOff = false;
+            }                
             else if (!forceOff)
             {
                 PerkCanvas.Visibility = Visibility.Visible;
@@ -281,6 +284,7 @@ namespace DBD_perk
             PerkCanvas.Width = settings.width;
             PerkCanvas.Height = settings.height;
             Description.FontSize = settings.fontSIze;
+            Description.LineHeight = settings.fontSIze + 4;
             perkDiplayingDelay = settings.displayTime;
             PerkColumn.Width = new GridLength(settings.perkSize);
             DescriptionColumn.Width = new GridLength(settings.width - settings.perkSize);
