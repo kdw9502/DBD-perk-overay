@@ -44,8 +44,6 @@ namespace DBD_perk
         [DllImport("user32.dll")]
         static extern IntPtr GetForegroundWindow();
 
-        //[DllImport("user32.dll")]
-        //static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int count);
 
         [DllImport("user32.dll")]
         public static extern IntPtr GetWindowThreadProcessId(IntPtr hWnd, out uint ProcessId);
@@ -119,9 +117,11 @@ namespace DBD_perk
 
         private void UpdateGUI(int index)
         {
-            PerkImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri($"{AppDomain.CurrentDomain.BaseDirectory}/resources/perks/{matchedPerkInfo[index].fileName}.png"));          
+            var info = matchedPerkInfo[index];
 
-            Description.Text = matchedPerkInfo[index].desc;
+            PerkImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri($"{AppDomain.CurrentDomain.BaseDirectory}/resources/perks/{info.fileName}.png"));
+            PerkName.Text = info.name;
+            Description.Text = info.desc;
         }
 
 
