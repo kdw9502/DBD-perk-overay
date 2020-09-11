@@ -1,8 +1,8 @@
 {
-  "fontSIze": 18,
+  "fontSIze": 20,
   "width": 1100,
   "height": 192,
-  "displayTime": 5,
+  "displayTime": 10,
   "perkSize": 128,
   "hide_when_background": true
 }
