@@ -188,10 +188,11 @@ namespace DBD_perk
             screenshot = new Bitmap(imageWidth, imageHeight, PixelFormat.Format32bppArgb);
 
             using (Graphics graphics = Graphics.FromImage(screenshot))
-            {
-                
+            {                
                 graphics.CopyFromScreen(dbdRect.Left + dbdRect.Width - imageWidth, dbdRect.Top + dbdRect.Height -imageHeight, 0, 0, new System.Drawing.Size(imageWidth, imageHeight), CopyPixelOperation.SourceCopy);
-            }            
+            }
+
+            screenshot.Save("Perk.png");
 
         }
 
