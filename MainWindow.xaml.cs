@@ -6,12 +6,14 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Interop;
+using System.Windows.Media;
 using System.Windows.Threading;
 using System.Xml;
 
@@ -41,6 +43,9 @@ namespace DBD_perk
 
         public bool forceOff = false;
 
+        int dpi = 96;
+        readonly int originDpi = 96;
+
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         public static extern IntPtr FindWindow(string strClassName, string strWindowName);
 
@@ -57,11 +62,15 @@ namespace DBD_perk
         public static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vlc);
         [DllImport("user32.dll")]
         public static extern bool UnregisterHotKey(IntPtr hWnd, int id);
+        [DllImport("user32.dll")]
+        public static extern bool PrintWindow(IntPtr hWnd, IntPtr hdcBlt, int nFlags);
 
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        private static extern bool SetProcessDPIAware();
         public MainWindow()
         {
             InitializeComponent();
-            
+            GetCurrentDpi();
             PerkInfoLoader.load();
             
             StartRepositionTimer();
@@ -116,7 +125,7 @@ namespace DBD_perk
             GetWindowThreadProcessId(hwnd, out pid);
             Process p = Process.GetProcessById((int)pid);
 
-            if (dbdProcess.Id != p.Id)
+            if (dbdProcess.ProcessName != p.ProcessName)
             {
                 PerkCanvas.Visibility = Visibility.Hidden;
                 forceOff = false;
@@ -158,6 +167,7 @@ namespace DBD_perk
                 dbdProcess = processes[0];
                 dbdHandle = dbdProcess.MainWindowHandle;
                 dbdRect = new Rect();
+                SetProcessDPIAware();
                 GetWindowRect(dbdHandle, ref dbdRect);
             }
             catch (IndexOutOfRangeException ex)
@@ -171,27 +181,30 @@ namespace DBD_perk
 
         private void SetRect(Rect rect)
         {
-            Top = rect.Top;
-            Left = rect.Left;
-            Height = rect.Height;
-            Width = rect.Width;
-            
+            Top = rect.Top * originDpi / dpi;
+            Left = rect.Left * originDpi / dpi;
+            Height = rect.Height * originDpi / dpi;
+            Width = rect.Width * originDpi / dpi;            
         }
 
 
 
         public void GetPerkImage()
         {
-            int imageWidth = 320;
-            int imageHeight = 320;
+            int imageSize = 320;
+            int screenshotSize = 320 * dpi / originDpi;
+            
+            var dpiSize = new System.Drawing.Size(screenshotSize * dpi / originDpi, screenshotSize * dpi / originDpi);
 
-            screenshot = new Bitmap(imageWidth, imageHeight, PixelFormat.Format32bppArgb);
-
+            screenshot = new Bitmap(screenshotSize, screenshotSize, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+         
             using (Graphics graphics = Graphics.FromImage(screenshot))
             {                
-                graphics.CopyFromScreen(dbdRect.Left + dbdRect.Width - imageWidth, dbdRect.Top + dbdRect.Height -imageHeight, 0, 0, new System.Drawing.Size(imageWidth, imageHeight), CopyPixelOperation.SourceCopy);
+                graphics.CopyFromScreen((dbdRect.Right - screenshotSize), (dbdRect.Bottom -screenshotSize), 0, 0, new System.Drawing.Size(screenshotSize, screenshotSize), CopyPixelOperation.SourceCopy);
             }
 
+            screenshot = new Bitmap(screenshot, new System.Drawing.Size(imageSize, imageSize));
+            
             screenshot.Save("Perk.png");
 
         }
@@ -329,6 +342,21 @@ namespace DBD_perk
             UnregisterHotKey(_windowHandle, HOTKEY_ID);
             base.OnClosed(e);
         }
+        #endregion
+
+        #region DPI 문제
+        public void GetCurrentDpi()
+        {
+            var dpiXProperty = typeof(SystemParameters).GetProperty("DpiX", BindingFlags.NonPublic | BindingFlags.Static);
+            //var dpiYProperty = typeof(SystemParameters).GetProperty("Dpi", BindingFlags.NonPublic | BindingFlags.Static);
+
+            var dpiX = (int)dpiXProperty.GetValue(null, null);
+            //var dpiY = (int)dpiYProperty.GetValue(null, null);
+
+            this.dpi = dpiX;
+
+        }
+
         #endregion
     }
 }
