@@ -3,7 +3,8 @@
 
 데바데 우측 하단의 퍽 이미지를 인식하여 설명을 불러옵니다.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LkT2xsgpXQs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<a href="https://youtu.be/LkT2xsgpXQs" target="_blank"><img src="https://user-images.githubusercontent.com/21076531/93013851-00545a00-f5e7-11ea-9efc-abc580f88ca6.png" alt="UWP"  border="10" /></a>
+
 
 # 사용법
 데바데를 실행 후 프로그램을 실행합니다.
