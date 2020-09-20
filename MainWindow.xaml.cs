@@ -337,6 +337,7 @@ namespace DBD_perk
         private const int HOTKEY_ID_F2 = 9001;
         private const int HOTKEY_ID_F3= 9002;
         private const int HOTKEY_ID_F4 = 9003;
+        private const int HOTKEY_ID_F5 = 9004;
         private IntPtr _windowHandle;
         private HwndSource _source;
         private bool isInit = false;
@@ -353,11 +354,13 @@ namespace DBD_perk
             int f2_key = 113;
             int f3_key = 114;
             int f4_key = 115;
+            int f5_key = 116;
 
             RegisterHotKey(_windowHandle, HOTKEY_ID_F1, 0, f1_key);
             RegisterHotKey(_windowHandle, HOTKEY_ID_F2, 0, f2_key);
             RegisterHotKey(_windowHandle, HOTKEY_ID_F3, 0, f3_key);
             RegisterHotKey(_windowHandle, HOTKEY_ID_F4, 0, f4_key);
+            RegisterHotKey(_windowHandle, HOTKEY_ID_F5, 0, f5_key);
             isInit = true;
         }
 
@@ -374,7 +377,9 @@ namespace DBD_perk
                 else if (key_id == HOTKEY_ID_F3)
                     OnPressF3();
                 else if (key_id == HOTKEY_ID_F4)
-                    OnPressF3();
+                    OnPressF4();
+                else if (key_id == HOTKEY_ID_F5)
+                    OnPressF5();
             }           
             return IntPtr.Zero;
         }
