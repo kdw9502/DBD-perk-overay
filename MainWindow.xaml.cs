@@ -38,8 +38,10 @@ namespace DBD_perk
         Bitmap screenshot;
         readonly string dbdProcessName = "DeadByDaylight-Win64-Shipping";
 
+        public bool isAutoUpdate = true;
         public bool hideWhenBackGround = true;
         private double perkDiplayingDelay = 5.0;
+
 
         public bool forceOff = false;
 
@@ -90,8 +92,7 @@ namespace DBD_perk
 
         private int nowDisplayingPerkIndex = 0;
         private void UpdateGUIAndScan(object sender, EventArgs e)
-        {           
-
+        {          
             GetPerkImage();
             FindOutPerks();
 
@@ -103,10 +104,21 @@ namespace DBD_perk
             if (matchedPerkInfo.Count == 0)
             {
                 PerkImage.Source = null;
-                Description.Text = "희생제 진행중이 아닙니다.";                
+                Description.Text = "희생제 진행중이 아닙니다.";
+                PerkName.Text = "";
 
                 return;
             }
+
+            ShowNextPerk();
+        }
+
+        private void ShowNextPerk()
+        {
+            if (matchedPerkInfo.Count == 0)
+                return;
+
+            nowDisplayingPerkIndex++;
 
             if (nowDisplayingPerkIndex >= matchedPerkInfo.Count)
             {
@@ -114,8 +126,21 @@ namespace DBD_perk
             }
 
             UpdateGUI(nowDisplayingPerkIndex);
+        }
 
-            nowDisplayingPerkIndex++;            
+        private void ShowPrevPerk()
+        {
+            if (matchedPerkInfo.Count == 0)
+                return;
+
+            nowDisplayingPerkIndex--;
+
+            if (nowDisplayingPerkIndex < 0)
+            {
+                nowDisplayingPerkIndex = matchedPerkInfo.Count - 1;
+            }
+
+            UpdateGUI(nowDisplayingPerkIndex);
         }
 
         private void HideOveray()
@@ -308,9 +333,13 @@ namespace DBD_perk
         #region Toggle_On_off
         //https://social.technet.microsoft.com/wiki/contents/articles/30568.wpf-implementing-global-hot-keys.aspx
 
-        private const int HOTKEY_ID = 9000;
+        private const int HOTKEY_ID_F1 = 9000;
+        private const int HOTKEY_ID_F2 = 9001;
+        private const int HOTKEY_ID_F3= 9002;
+        private const int HOTKEY_ID_F4 = 9003;
         private IntPtr _windowHandle;
         private HwndSource _source;
+        private bool isInit = false;
         protected override void OnSourceInitialized(EventArgs e)
         {
             base.OnSourceInitialized(e);
@@ -320,26 +349,72 @@ namespace DBD_perk
             _source.AddHook(HwndHook);
 
             //https://docs.microsoft.com/ko-kr/dotnet/api/system.windows.forms.keys?view=netcore-3.1                        
+            int f1_key = 112;
             int f2_key = 113;
+            int f3_key = 114;
+            int f4_key = 115;
 
-            RegisterHotKey(_windowHandle, HOTKEY_ID, 0, f2_key);
+            RegisterHotKey(_windowHandle, HOTKEY_ID_F1, 0, f1_key);
+            RegisterHotKey(_windowHandle, HOTKEY_ID_F2, 0, f2_key);
+            RegisterHotKey(_windowHandle, HOTKEY_ID_F3, 0, f3_key);
+            RegisterHotKey(_windowHandle, HOTKEY_ID_F4, 0, f4_key);
+            isInit = true;
         }
 
         private IntPtr HwndHook(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
             const int WM_HOTKEY = 0x0312;
-            if (msg == WM_HOTKEY && wParam.ToInt32() == HOTKEY_ID)
+            var key_id = wParam.ToInt32();
+            if (msg == WM_HOTKEY )
             {
-                PerkCanvas.Visibility = PerkCanvas.Visibility == Visibility.Hidden ? Visibility.Visible : Visibility.Hidden;
-                forceOff = PerkCanvas.Visibility == Visibility.Hidden;
+                if (key_id == HOTKEY_ID_F1)
+                    OnPressF1();
+                else if (key_id == HOTKEY_ID_F2)
+                    OnPressF2();
+                else if (key_id == HOTKEY_ID_F3)
+                    OnPressF3();
+                else if (key_id == HOTKEY_ID_F4)
+                    OnPressF3();
             }           
             return IntPtr.Zero;
+        }
+        private void OnPressF1()
+        {
+            isAutoUpdate = !isAutoUpdate;
+            RefreshIcon.Visibility = isAutoUpdate ? Visibility.Visible : Visibility.Hidden;
+        }
+        private void OnPressF2()
+        {
+            PerkCanvas.Visibility = PerkCanvas.Visibility == Visibility.Hidden ? Visibility.Visible : Visibility.Hidden;
+            forceOff = PerkCanvas.Visibility == Visibility.Hidden;
+        }
+
+        private void OnPressF3()
+        {
+            ShowPrevPerk();
+        }
+
+        private void OnPressF4()
+        {
+            ShowNextPerk();
+        }
+
+        private void OnPressF5()
+        {
+            UpdateGUIAndScan(null,null);
         }
 
         protected override void OnClosed(EventArgs e)
         {
-            _source.RemoveHook(HwndHook);
-            UnregisterHotKey(_windowHandle, HOTKEY_ID);
+            if(isInit)
+            {
+                _source.RemoveHook(HwndHook);
+                UnregisterHotKey(_windowHandle, HOTKEY_ID_F2);
+                UnregisterHotKey(_windowHandle, HOTKEY_ID_F3);
+                UnregisterHotKey(_windowHandle, HOTKEY_ID_F4);
+            }
+
+
             base.OnClosed(e);
         }
         #endregion

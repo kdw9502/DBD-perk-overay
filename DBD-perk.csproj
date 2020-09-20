@@ -26,6 +26,7 @@
     <None Remove="Font\NanumBarunGothicLight.ttf" />
     <None Remove="Font\NanumBarunGothicUltraLight.ttf" />
     <None Remove="resources\bg.png" />
+    <None Remove="resources\icon-refresh-512.png" />
     <None Remove="resources\perks\aceInTheHole.png" />
     <None Remove="resources\perks\adrenaline.png" />
     <None Remove="resources\perks\aftercare.png" />
@@ -343,6 +344,7 @@
     <None Remove="resources\perks_crop\windowsOfOpportunity.png" />
     <None Remove="resources\perks_crop\zanshinTactics.png" />
     <None Remove="resources\perk_info.txt" />
+    <None Remove="resources\refresh.png" />
     <None Remove="settings.txt" />
     <None Remove="읽어주세요.txt" />
   </ItemGroup>
@@ -361,6 +363,7 @@
     <Resource Include="resources\bg.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="resources\refresh.png" />
     <EmbeddedResource Include="resources\perks\builtToLast.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

@@ -29,10 +29,11 @@
                     <ColumnDefinition x:Name="DescriptionColumn" Width="*"/>
                 </Grid.ColumnDefinitions>
 
+                <Image x:Name="RefreshIcon" Stretch="Fill" Source="resources/refresh.png" Canvas.Left="0" Grid.Column="0" VerticalAlignment="Top" Width="40" Height="40" HorizontalAlignment="Left"/>
                 <Image x:Name="PerkBG" Stretch="Fill" Source="resources/bg.png" Canvas.Left="0" Grid.Column="0" VerticalAlignment="Top"/>
                 <Image x:Name="PerkImage" Stretch="Fill" Grid.Column="0" VerticalAlignment="Top"/>
 
-                <TextBlock x:Name="Description" TextWrapping="Wrap" Foreground="White" Text="성공적으로 시작되었습니다.&#x0a;F2를 눌러 창을 숨길 수 있습니다.&#x0a;settings.txt파일을 수정하여 크기, 표기시간을 변경할 수 있습니다." FontSize="18" Canvas.Top="10" Grid.RowSpan="2" 
+                <TextBlock x:Name="Description" TextWrapping="Wrap" Foreground="White" Text="성공적으로 시작되었습니다.&#x0a;F1 키를 눌러 자동/수동 모드를 변경할 수 있습니다.&#x0a;F2 키를 눌러 창을 숨길 수 있습니다.F3 키를 눌러 이전 퍽을 볼 수 있습니다.&#x0a;F4 키를 눌러 다음 퍽을 볼 수 있습니다.F5 키를 눌러 퍽 정보를 갱신할 수 있습니다.&#x0a;settings.txt파일을 수정하여 크기, 표기시간을 변경할 수 있습니다." FontSize="18" Canvas.Top="10" Grid.RowSpan="2" 
                            Grid.Column="1" FontFamily="NanumBarunGothic" FontWeight="Normal" FontStyle="Normal" Margin="0,10,0,0" HorizontalAlignment="Stretch" IsEnabled="True"/>
 
                 <TextBlock x:Name="PerkName" TextWrapping="Wrap" Grid.Column="0" Text="" Foreground="White" FontSize="{Binding ElementName=Description, Path=FontSize}" 
