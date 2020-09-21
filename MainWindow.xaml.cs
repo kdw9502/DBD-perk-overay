@@ -86,12 +86,19 @@ namespace DBD_perk
         private void StartScanPerkAndDiplayTimer()
         {
             perkScanTimer.Interval = TimeSpan.FromSeconds(perkDiplayingDelay);
-            perkScanTimer.Tick += new EventHandler(UpdateGUIAndScan);
+            perkScanTimer.Tick += new EventHandler(AutoUpdate);
             perkScanTimer.Start();
         }
 
         private int nowDisplayingPerkIndex = 0;
-        private void UpdateGUIAndScan(object sender, EventArgs e)
+
+        private void AutoUpdate(object sender, EventArgs e)
+        {
+            if (isAutoUpdate)
+                UpdateGUIAndScan();
+        }
+
+        private void UpdateGUIAndScan()
         {          
             GetPerkImage();
             FindOutPerks();
@@ -229,8 +236,6 @@ namespace DBD_perk
             }
 
             screenshot = new Bitmap(screenshot, new System.Drawing.Size(imageSize, imageSize));
-            
-            screenshot.Save("Perk.png");
 
         }
 
@@ -406,7 +411,7 @@ namespace DBD_perk
 
         private void OnPressF5()
         {
-            UpdateGUIAndScan(null,null);
+            UpdateGUIAndScan();
         }
 
         protected override void OnClosed(EventArgs e)
